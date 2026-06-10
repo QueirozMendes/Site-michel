@@ -1,62 +1,92 @@
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
+const GOLD = "#c9a96e";
+
 const services = [
   {
+    num: "01",
     title: "Consultoria Conceitual",
-    description: "Estratégia e posicionamento de espaços de bem-estar. Antes do traço, a intenção. Definimos a vocação do espaço e sua narrativa curativa.",
-    image: "/portfolio-4.png"
+    subtitle: "Wellness Strategy",
+    desc: "Diagnóstico completo do empreendimento para definir o DNA do espaço wellness. Antes de qualquer máquina ou layout, entendemos quem é o público e qual experiência precisa ser gerada.",
+    items: ["Perfil do público e estilo de vida", "Direcionamento conceitual do espaço", "Mood & lifestyle direction", "Benchmarking de referências globais"],
   },
   {
-    title: "Design Sensorial",
-    description: "A arquitetura invisível. Projetamos a luz que acalma, a acústica que isola, o aroma que centra e a textura que aterra.",
-    image: "/service-1.png"
+    num: "02",
+    title: "Space Planning",
+    subtitle: "Layout Estratégico",
+    desc: "Distribuição inteligente do espaço com foco em fluxo, ergonomia e percepção de sofisticação. Máximo valor por metro quadrado.",
+    items: ["Divisão e zoneamento do espaço", "Fluxo de circulação", "Posicionamento dos equipamentos", "Otimização de metragem"],
   },
   {
+    num: "03",
     title: "Curadoria de Equipamentos",
-    description: "Acesso direto às manufaturas mais exclusivas do mundo. Equipamentos que funcionam como esculturas e performam como instrumentos de precisão.",
-    image: "/portfolio-1.png"
+    subtitle: "Equipment Curation",
+    desc: "Seleção precisa de aparelhos conforme o perfil do público e o budget do empreendimento. Sem desperdício. Sem superlotação. Sem compra equivocada.",
+    items: ["Especificação técnica por zona", "Curadoria de fornecedores premium", "Análise custo-benefício", "Quantitativo otimizado"],
   },
   {
-    title: "Longevidade & Recovery",
-    description: "O ápice da ciência do descanso. Câmaras de crioterapia customizadas, saunas de precisão térmica e santuários de regeneração celular.",
-    image: "/service-2.png"
-  }
+    num: "04",
+    title: "Wellness Amenities",
+    subtitle: "Longevity Layer",
+    desc: "Integração de amenidades de longevidade e recovery que elevam a percepção de luxo e diferenciam o empreendimento no mercado.",
+    items: ["Sauna · Cold Plunge · Infrared", "Recovery & Compression Therapy", "Pilates · Yoga · Breathwork", "Longevity Rooms"],
+  },
+  {
+    num: "05",
+    title: "User Journey Design",
+    subtitle: "Experience Layer",
+    desc: "Design completo da experiência sensorial do espaço. Como a pessoa entra, circula, sente e vive o ambiente. Iluminação, aromas, som, interação social.",
+    items: ["Iluminação cênica e funcional", "Design de aromas e ambiência", "Trilha sonora e identidade auditiva", "Pontos de interação social"],
+  },
+  {
+    num: "06",
+    title: "Retrofit de Academias",
+    subtitle: "Premium Upgrade",
+    desc: "Reestruturação de academias existentes em espaços wellness de alto padrão. Transformação de custo de condomínio em ativo de valorização imobiliária.",
+    items: ["Diagnóstico do espaço atual", "Plano de modernização", "Substituição estratégica de equipamentos", "Elevação da percepção de valor"],
+  },
 ];
 
 export default function Servicos() {
   return (
     <PageWrapper>
-      <div className="pt-40 pb-24 px-6">
+      <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
-            <h1 className="text-5xl md:text-7xl font-serif mb-24">Nossos<br /><span className="italic text-muted-foreground">Serviços</span></h1>
+            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: GOLD }}>— O que entrego</p>
+            <h1 className="text-5xl md:text-7xl font-serif text-white leading-tight">
+              Serviços para<br />
+              <span className="italic font-light" style={{ color: GOLD }}>empreendimentos</span>
+            </h1>
+            <p className="mt-8 max-w-xl text-white/50 font-light leading-relaxed">
+              Do conceito estratégico à curadoria sensorial — cada projeto é tratado como um ecossistema único, alinhado ao público e ao posicionamento do empreendimento.
+            </p>
           </FadeIn>
 
-          <div className="space-y-32">
-            {services.map((svc, index) => (
-              <div key={index} className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                <FadeIn 
-                  direction={index % 2 === 0 ? "right" : "left"} 
-                  className={index % 2 !== 0 ? "md:order-2" : ""}
-                >
-                  <div className="aspect-square overflow-hidden bg-muted">
-                    <img src={svc.image} alt={svc.title} className="w-full h-full object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px mt-24 border border-white/8 bg-white/8">
+            {services.map((svc, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="bg-[#0f0e0c] p-10 h-full hover:bg-[#161410] transition-colors duration-300 group">
+                  <div className="flex items-start justify-between mb-8">
+                    <div className="w-8 h-px mt-3" style={{ background: GOLD }} />
+                    <span className="font-serif text-6xl font-light text-white/6 leading-none select-none group-hover:text-white/10 transition-colors">
+                      {svc.num}
+                    </span>
                   </div>
-                </FadeIn>
-                
-                <FadeIn 
-                  delay={0.2} 
-                  direction={index % 2 === 0 ? "left" : "right"}
-                  className={index % 2 !== 0 ? "md:order-1" : ""}
-                >
-                  <span className="text-primary font-mono text-xs tracking-widest uppercase block mb-6">0{index + 1}</span>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-6">{svc.title}</h2>
-                  <p className="text-muted-foreground font-light leading-relaxed text-lg max-w-md">
-                    {svc.description}
-                  </p>
-                </FadeIn>
-              </div>
+                  <h3 className="font-serif text-white text-2xl mb-1">{svc.title}</h3>
+                  <p className="text-xs tracking-[0.2em] uppercase mb-6 font-light" style={{ color: GOLD }}>{svc.subtitle}</p>
+                  <p className="text-white/50 text-sm leading-relaxed mb-8">{svc.desc}</p>
+                  <ul className="space-y-3">
+                    {svc.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-3 text-white/35 text-xs">
+                        <div className="w-4 h-px mt-2 flex-shrink-0" style={{ background: GOLD + "80" }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>

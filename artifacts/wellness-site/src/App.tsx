@@ -7,8 +7,8 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Sobre from "@/pages/Sobre";
 import Servicos from "@/pages/Servicos";
-import Portfolio from "@/pages/Portfolio";
-import Questionario from "@/pages/Questionario";
+import Metodologia from "@/pages/Metodologia";
+import Espacos from "@/pages/Espacos";
 import Contato from "@/pages/Contato";
 
 const queryClient = new QueryClient();
@@ -19,8 +19,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/sobre" component={Sobre} />
       <Route path="/servicos" component={Servicos} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/questionario" component={Questionario} />
+      <Route path="/metodologia" component={Metodologia} />
+      <Route path="/espacos" component={Espacos} />
       <Route path="/contato" component={Contato} />
       <Route component={NotFound} />
     </Switch>

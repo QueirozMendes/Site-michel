@@ -3,101 +3,162 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
+const GOLD = "#c9a96e";
+
 export default function Home() {
   return (
     <PageWrapper>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero */}
+      <section className="relative h-screen flex items-end pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/30 z-10" />
-          <img 
-            src="/hero.png" 
-            alt="Cinematic luxury wellness pool" 
-            className="w-full h-full object-cover scale-105 transform transition-transform duration-[20s] hover:scale-100"
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-10" />
+          <img
+            src="/hero.png"
+            alt="Luxury wellness space"
+            className="w-full h-full object-cover scale-[1.03] transition-transform duration-[25s] hover:scale-100"
           />
         </div>
-        
-        <div className="container mx-auto px-6 relative z-20 text-center">
-          <FadeIn delay={0.2}>
-            <span className="text-white/80 tracking-[0.3em] uppercase text-sm mb-6 block font-light">
-              Arquitetura de Bem-Estar
-            </span>
-          </FadeIn>
-          <FadeIn delay={0.4}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight">
-              O silêncio do <br />
-              <span className="italic font-light">design intencional.</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.6}>
-            <div className="flex justify-center mt-12">
-              <Link href="/questionario">
-                <span className="inline-flex items-center space-x-3 text-white border-b border-white/30 pb-2 hover:border-white transition-colors cursor-pointer tracking-widest uppercase text-xs">
-                  <span>Iniciar Projeto</span>
-                  <ArrowRight size={14} />
-                </span>
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
 
-      {/* Intro Section */}
-      <section className="py-32 md:py-48 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-relaxed">
-              Desenhamos ecossistemas de cura para residências e hotéis que não aceitam o padrão.
-            </h2>
-            <div className="mt-12 h-px w-24 bg-primary mx-auto opacity-50" />
-            <p className="mt-12 text-lg md:text-xl text-muted-foreground font-light leading-loose">
-              Não vendemos equipamentos. Nós curamos atmosferas. A intersecção exata entre a quietude de um onsen japonês e a precisão tátil do design milanês. Para clientes que não perguntam o preço, mas sim a disponibilidade.
+        <div className="container mx-auto px-6 md:px-12 relative z-20">
+          <FadeIn delay={0.2}>
+            <p className="text-white/50 tracking-[0.4em] uppercase text-xs mb-8 font-light">
+              Luxury Wellness Design · São Paulo
             </p>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* Visual Break */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <FadeIn delay={0.1} direction="up" className="aspect-[4/5] relative overflow-hidden group">
-              <img src="/portfolio-4.png" alt="Sensory design" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            </FadeIn>
-            <FadeIn delay={0.3} direction="up" className="aspect-[4/5] relative overflow-hidden group md:mt-24">
-              <img src="/service-1.png" alt="Texture detail" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-32 px-6 bg-foreground text-background">
-        <div className="container mx-auto">
-          <FadeIn>
-            <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-white/10 pb-12">
-              <h2 className="text-4xl md:text-6xl font-serif">Áreas de<br /><span className="italic text-muted/60">Atuação</span></h2>
+          <FadeIn delay={0.4}>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white leading-none">
+              Michel <span style={{ color: GOLD }} className="italic font-light">Bueno</span>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.55}>
+            <p className="mt-4 tracking-[0.25em] uppercase text-xs font-light" style={{ color: GOLD }}>
+              Wellness Design
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.7}>
+            <p className="mt-8 max-w-lg text-white/70 font-light text-lg leading-relaxed italic">
+              Projetando ecossistemas de wellness, performance<br />
+              e longevidade para empreendimentos de alto padrão.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.85}>
+            <div className="flex items-center gap-8 mt-12">
               <Link href="/servicos">
-                <span className="hidden md:inline-flex items-center space-x-3 text-muted border-b border-muted/30 pb-2 hover:border-muted hover:text-white transition-colors cursor-pointer tracking-widest uppercase text-xs mt-8 md:mt-0">
-                  <span>Ver todos os serviços</span>
-                  <ArrowRight size={14} />
+                <span className="inline-flex items-center justify-center border border-white/30 text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/10 transition-all cursor-pointer">
+                  Ver Serviços
+                </span>
+              </Link>
+              <Link href="/contato">
+                <span className="inline-flex items-center justify-center border text-xs tracking-[0.2em] uppercase px-8 py-4 hover:opacity-80 transition-all cursor-pointer" style={{ borderColor: GOLD, color: GOLD }}>
+                  Falar Comigo
                 </span>
               </Link>
             </div>
           </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { title: "Design Sensorial", desc: "A coreografia invisível de luz, som e textura." },
-              { title: "Curadoria de Equipamentos", desc: "Apenas as peças mais exclusivas do mercado global." },
-              { title: "Longevidade & Recovery", desc: "Laboratórios privados de performance e descanso." }
-            ].map((svc, i) => (
-              <FadeIn key={i} delay={i * 0.2}>
-                <h3 className="text-xl font-serif mb-4">{svc.title}</h3>
-                <p className="text-muted/60 font-light text-sm">{svc.desc}</p>
-              </FadeIn>
-            ))}
+          <div className="mt-20 flex flex-col items-start gap-1">
+            <div className="w-px h-12 bg-white/20 mx-0" />
+            <p className="text-white/30 text-xs tracking-[0.3em] uppercase">Explorar</p>
           </div>
+        </div>
+      </section>
+
+      {/* Filosofia Statement */}
+      <section className="py-36 px-6 md:px-12 bg-[#0f0e0c]">
+        <div className="container mx-auto max-w-4xl text-center">
+          <FadeIn>
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <div className="h-px w-12" style={{ background: GOLD }} />
+              <span className="text-xs tracking-[0.4em] uppercase font-light" style={{ color: GOLD }}>Filosofia</span>
+              <div className="h-px w-12" style={{ background: GOLD }} />
+            </div>
+            <h2 className="text-4xl md:text-6xl font-serif text-white leading-snug">
+              Não vendemos máquinas.<br />
+              <span className="italic" style={{ color: GOLD }}>Desenhamos experiências.</span><br />
+              Criamos ecossistemas de wellness<br />
+              que se tornam ativos de valor.
+            </h2>
+            <p className="mt-12 text-xs tracking-[0.3em] text-white/30 uppercase">Michel Bueno Wellness Design · São Paulo · 2025</p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Visual grid */}
+      <section className="px-6 md:px-12 pb-0 bg-[#0f0e0c]">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-2">
+          {["/portfolio-1.png", "/portfolio-2.png", "/portfolio-3.png", "/portfolio-4.png"].map((src, i) => (
+            <FadeIn key={i} delay={i * 0.1} direction="up">
+              <div className="aspect-[3/4] overflow-hidden group">
+                <img src={src} alt="" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%]" />
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      {/* Para quem */}
+      <section className="py-36 px-6 md:px-12 bg-[#0f0e0c]">
+        <div className="container mx-auto">
+          <FadeIn>
+            <p className="text-xs tracking-[0.4em] uppercase mb-4 font-light" style={{ color: GOLD }}>— Para quem projeto</p>
+            <h2 className="text-5xl md:text-7xl font-serif text-white leading-tight mb-4">
+              Empreendimentos
+            </h2>
+            <h2 className="text-5xl md:text-7xl font-serif leading-tight mb-16" style={{ color: GOLD }}>
+              <span className="italic font-light">de alto padrão</span>
+            </h2>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <FadeIn delay={0.2}>
+              <blockquote className="text-white/70 font-serif text-2xl italic leading-relaxed border-l-2 pl-8" style={{ borderColor: GOLD }}>
+                "A academia deixa de ser um custo de condomínio e passa a ser uma ferramenta de valorização imobiliária."
+              </blockquote>
+              <div className="mt-12 flex flex-wrap gap-3">
+                {["Incorporadoras","Construtoras","Hotéis 5 Estrelas","Resorts","Branded Residences","Condomínios de Luxo","Wellness Clubs","Retrofit Premium","Fundos Imobiliários","Projetos de Lifestyle"].map((tag) => (
+                  <span key={tag} className="border border-white/15 text-white/40 text-xs tracking-[0.15em] uppercase px-3 py-2">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <ul className="space-y-6">
+                {[
+                  "Gera valor imobiliário percebido",
+                  "Aumenta retenção de moradores e hóspedes",
+                  "Diferencia o empreendimento no mercado",
+                  "Cria lifestyle branding consistente",
+                  "Eleva o ticket e a percepção de luxo",
+                  "Atrai o perfil de público premium",
+                  "Transforma academia em ativo de venda",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 border-b border-white/8 pb-6 last:border-0">
+                    <div className="w-6 h-px mt-3 flex-shrink-0" style={{ background: GOLD }} />
+                    <span className="text-white/70 font-light">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Strip */}
+      <section className="py-24 px-6 md:px-12 border-t border-white/8 bg-[#0f0e0c]">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          <FadeIn>
+            <h3 className="text-3xl md:text-4xl font-serif text-white">
+              Vamos <span className="italic" style={{ color: GOLD }}>conversar</span>
+            </h3>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <Link href="/contato">
+              <span className="inline-flex items-center gap-3 border text-xs tracking-[0.2em] uppercase px-10 py-4 hover:opacity-70 transition-all cursor-pointer" style={{ borderColor: GOLD, color: GOLD }}>
+                Solicitar Proposta <ArrowRight size={12} />
+              </span>
+            </Link>
+          </FadeIn>
         </div>
       </section>
     </PageWrapper>
