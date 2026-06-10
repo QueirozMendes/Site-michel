@@ -42,15 +42,15 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.85}>
-            <div className="flex items-center gap-8 mt-12">
-              <Link href="/servicos">
-                <span className="inline-flex items-center justify-center border border-white/30 text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/10 transition-all cursor-pointer">
-                  Ver Serviços
+            <div className="flex items-center gap-5 mt-12">
+              <Link href="/contato">
+                <span className="inline-flex items-center justify-center bg-white text-[#0f0e0c] text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/90 transition-all cursor-pointer">
+                  Falar Comigo
                 </span>
               </Link>
-              <Link href="/contato">
-                <span className="inline-flex items-center justify-center border text-xs tracking-[0.2em] uppercase px-8 py-4 hover:opacity-80 transition-all cursor-pointer" style={{ borderColor: GOLD, color: GOLD }}>
-                  Falar Comigo
+              <Link href="/servicos">
+                <span className="inline-flex items-center justify-center border border-white/70 text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/10 transition-all cursor-pointer">
+                  Ver Serviços
                 </span>
               </Link>
             </div>
