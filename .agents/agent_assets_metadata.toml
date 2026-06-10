@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "C2VyyRlTrkBqnMKusGtG9"
+uri = "file://artifacts/wellness-site/public/hero.png"
+type = "image"
+title = "Cinematic luxury wellness pool"
+
+[[generated]]
+id = "5Ka0faKDYrK8FvRFRvKe8"
+uri = "file://artifacts/wellness-site/public/portrait.png"
+type = "image"
+title = "Refined architect portrait"
+
+[[generated]]
+id = "jUTRjQEweLRbUcYxuHG9G"
+uri = "file://artifacts/wellness-site/public/service-1.png"
+type = "image"
+title = "Textured architectural detail"
+
+[[generated]]
+id = "1ZIQTIbU5iZkT55TBG028"
+uri = "file://artifacts/wellness-site/public/service-2.png"
+type = "image"
+title = "Minimalist wooden sauna interior"
+
+[[generated]]
+id = "_hxB7GWPrkoI9AVKory8-"
+uri = "file://artifacts/wellness-site/public/portfolio-1.png"
+type = "image"
+title = "Luxury private home gym"
+
+[[generated]]
+id = "bb0WTylMYSc4UWIAAputU"
+uri = "file://artifacts/wellness-site/public/portfolio-2.png"
+type = "image"
+title = "Recovery room cold plunge"
+
+[[generated]]
+id = "YAf73s4gXPAA_BaSvsZhv"
+uri = "file://artifacts/wellness-site/public/portfolio-3.png"
+type = "image"
+title = "Indoor spa area reflections"
+
+[[generated]]
+id = "QY_p8xnlA1gEMbXHwJ25i"
+uri = "file://artifacts/wellness-site/public/portfolio-4.png"
+type = "image"
+title = "Sensory design wellness room"

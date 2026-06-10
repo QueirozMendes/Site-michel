@@ -4,23 +4,24 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
-const queryClient = new QueryClient();
+import Home from "@/pages/Home";
+import Sobre from "@/pages/Sobre";
+import Servicos from "@/pages/Servicos";
+import Portfolio from "@/pages/Portfolio";
+import Questionario from "@/pages/Questionario";
+import Contato from "@/pages/Contato";
 
-function Home() {
-  return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">Replit Agent is building...</h1>
-        <p className="mt-2 text-sm text-gray-600">Your app will appear here once it's ready.</p>
-      </div>
-    </div>
-  );
-}
+const queryClient = new QueryClient();
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/sobre" component={Sobre} />
+      <Route path="/servicos" component={Servicos} />
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/questionario" component={Questionario} />
+      <Route path="/contato" component={Contato} />
       <Route component={NotFound} />
     </Switch>
   );
