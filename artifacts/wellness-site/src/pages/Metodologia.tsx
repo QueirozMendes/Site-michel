@@ -52,35 +52,33 @@ export default function Metodologia() {
               Metodologia em<br />
               <span className="italic font-light" style={{ color: GOLD }}>5 fases</span>
             </h1>
-            <p className="mt-8 max-w-xl text-white/50 font-light leading-relaxed">
+            <p className="mt-8 max-w-xl text-white/75 font-light leading-relaxed">
               Um processo estruturado do diagnóstico à entrega — garantindo que cada decisão esteja alinhada ao público, ao empreendimento e ao objetivo do incorporador.
             </p>
           </FadeIn>
 
           <div className="mt-24 relative">
-            {/* vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-white/8 hidden md:block" />
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-white/10 hidden md:block" />
 
             <div className="space-y-0">
               {phases.map((phase, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-16 border-b border-white/8 relative">
-                    {/* diamond on line */}
-                    <div className="hidden md:flex absolute left-[27px] top-1/2 -translate-y-1/2 w-5 h-5 rotate-45 border border-[#c9a96e]/40 bg-[#0f0e0c] items-center justify-center">
-                      <div className="w-1.5 h-1.5 rotate-0 rounded-full" style={{ background: GOLD }} />
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-16 border-b border-white/10 relative">
+                    <div className="hidden md:flex absolute left-[27px] top-1/2 -translate-y-1/2 w-5 h-5 rotate-45 border border-[#c9a96e]/60 bg-[#0f0e0c] items-center justify-center">
+                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
                     </div>
 
                     <div className="md:col-span-2 md:pl-20 flex md:flex-col items-center md:items-start gap-4">
-                      <span className="font-serif text-5xl font-light text-white/10 leading-none">{phase.num}</span>
+                      <span className="font-serif text-5xl font-light text-white/15 leading-none">{phase.num}</span>
                     </div>
 
                     <div className="md:col-span-10">
                       <h3 className="font-serif text-white text-3xl mb-1">{phase.title}</h3>
                       <p className="text-xs tracking-[0.2em] uppercase mb-6 font-light" style={{ color: GOLD }}>{phase.subtitle}</p>
-                      <p className="text-white/55 font-light leading-relaxed max-w-2xl mb-8">{phase.desc}</p>
+                      <p className="text-white/75 font-light leading-relaxed max-w-2xl mb-8">{phase.desc}</p>
                       <div className="flex flex-wrap gap-2">
                         {phase.tags.map((tag) => (
-                          <span key={tag} className="border border-white/12 text-white/30 text-xs tracking-[0.15em] uppercase px-3 py-2">
+                          <span key={tag} className="border border-white/25 text-white/60 text-xs tracking-[0.15em] uppercase px-3 py-2">
                             {tag}
                           </span>
                         ))}

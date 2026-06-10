@@ -17,7 +17,7 @@ export default function Sobre() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mt-24 items-start">
-            <div className="md:col-span-6 space-y-8 text-white/65 font-light text-lg leading-relaxed">
+            <div className="md:col-span-6 space-y-8 text-white/80 font-light text-lg leading-relaxed">
               <FadeIn delay={0.2}>
                 <p>
                   <strong className="text-white font-normal">Michel Bueno</strong> é Wellness & Longevity Director especializado em projetar ecossistemas de alta performance para empreendimentos de luxo. Com trajetória construída nos ambientes mais exigentes do mercado premium brasileiro, atua na intersecção entre design de espaços, longevidade e experiência do usuário.
@@ -41,7 +41,7 @@ export default function Sobre() {
                       <div className="w-6 h-px mt-3 flex-shrink-0" style={{ background: GOLD }} />
                       <div>
                         <h4 className="text-white text-sm font-normal tracking-wide mb-2">{item.title}</h4>
-                        <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                        <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -65,9 +65,9 @@ export default function Sobre() {
                       { label: "Atuação", value: "São Paulo, SP — Brasil" },
                       { label: "Instagram", value: "@michel_bueno" },
                     ].map((cred) => (
-                      <li key={cred.label} className="flex justify-between items-center border-b border-white/8 pb-4 last:border-0">
-                        <span className="text-xs tracking-[0.2em] uppercase text-white/30">{cred.label}</span>
-                        <span className="text-sm text-white/70">{cred.value}</span>
+                      <li key={cred.label} className="flex justify-between items-center border-b border-white/10 pb-4 last:border-0">
+                        <span className="text-xs tracking-[0.2em] uppercase text-white/55">{cred.label}</span>
+                        <span className="text-sm text-white/85">{cred.value}</span>
                       </li>
                     ))}
                   </ul>

@@ -59,7 +59,7 @@ export default function Servicos() {
               Serviços para<br />
               <span className="italic font-light" style={{ color: GOLD }}>empreendimentos</span>
             </h1>
-            <p className="mt-8 max-w-xl text-white/50 font-light leading-relaxed">
+            <p className="mt-8 max-w-xl text-white/75 font-light leading-relaxed">
               Do conceito estratégico à curadoria sensorial — cada projeto é tratado como um ecossistema único, alinhado ao público e ao posicionamento do empreendimento.
             </p>
           </FadeIn>
@@ -76,10 +76,10 @@ export default function Servicos() {
                   </div>
                   <h3 className="font-serif text-white text-2xl mb-1">{svc.title}</h3>
                   <p className="text-xs tracking-[0.2em] uppercase mb-6 font-light" style={{ color: GOLD }}>{svc.subtitle}</p>
-                  <p className="text-white/50 text-sm leading-relaxed mb-8">{svc.desc}</p>
+                  <p className="text-white/75 text-sm leading-relaxed mb-8">{svc.desc}</p>
                   <ul className="space-y-3">
                     {svc.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-white/35 text-xs">
+                      <li key={j} className="flex items-start gap-3 text-white/65 text-xs">
                         <div className="w-4 h-px mt-2 flex-shrink-0" style={{ background: GOLD + "80" }} />
                         {item}
                       </li>

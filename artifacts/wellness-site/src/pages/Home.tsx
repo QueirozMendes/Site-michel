@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className="container mx-auto px-6 md:px-12 relative z-20">
           <FadeIn delay={0.2}>
-            <p className="text-white/50 tracking-[0.4em] uppercase text-xs mb-8 font-light">
+            <p className="text-white/70 tracking-[0.4em] uppercase text-xs mb-8 font-light">
               Luxury Wellness Design · São Paulo
             </p>
           </FadeIn>
@@ -36,7 +36,7 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.7}>
-            <p className="mt-8 max-w-lg text-white/70 font-light text-lg leading-relaxed italic">
+            <p className="mt-8 max-w-lg text-white/85 font-light text-lg leading-relaxed italic">
               Projetando ecossistemas de wellness, performance<br />
               e longevidade para empreendimentos de alto padrão.
             </p>
@@ -57,7 +57,7 @@ export default function Home() {
           </FadeIn>
           <div className="mt-20 flex flex-col items-start gap-1">
             <div className="w-px h-12 bg-white/20 mx-0" />
-            <p className="text-white/30 text-xs tracking-[0.3em] uppercase">Explorar</p>
+            <p className="text-white/55 text-xs tracking-[0.3em] uppercase">Explorar</p>
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function Home() {
               Criamos ecossistemas de wellness<br />
               que se tornam ativos de valor.
             </h2>
-            <p className="mt-12 text-xs tracking-[0.3em] text-white/30 uppercase">Michel Bueno Wellness Design · São Paulo · 2025</p>
+            <p className="mt-12 text-xs tracking-[0.3em] text-white/50 uppercase">Michel Bueno Wellness Design · São Paulo · 2025</p>
           </FadeIn>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function Home() {
               </blockquote>
               <div className="mt-12 flex flex-wrap gap-3">
                 {["Incorporadoras","Construtoras","Hotéis 5 Estrelas","Resorts","Branded Residences","Condomínios de Luxo","Wellness Clubs","Retrofit Premium","Fundos Imobiliários","Projetos de Lifestyle"].map((tag) => (
-                  <span key={tag} className="border border-white/15 text-white/40 text-xs tracking-[0.15em] uppercase px-3 py-2">
+                  <span key={tag} className="border border-white/25 text-white/65 text-xs tracking-[0.15em] uppercase px-3 py-2">
                     {tag}
                   </span>
                 ))}
@@ -133,9 +133,9 @@ export default function Home() {
                   "Atrai o perfil de público premium",
                   "Transforma academia em ativo de venda",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 border-b border-white/8 pb-6 last:border-0">
+                  <li key={i} className="flex items-start gap-4 border-b border-white/10 pb-6 last:border-0">
                     <div className="w-6 h-px mt-3 flex-shrink-0" style={{ background: GOLD }} />
-                    <span className="text-white/70 font-light">{item}</span>
+                    <span className="text-white/80 font-light">{item}</span>
                   </li>
                 ))}
               </ul>
