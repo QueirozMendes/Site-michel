@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Wellness Luxury Site"
+version = "1.0.0"
+id = "artifacts/wellness-site"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24237
+
+[services.development]
+run = "pnpm --filter @workspace/wellness-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/wellness-site", "run", "build" ]
+publicDir = "artifacts/wellness-site/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24237"
+BASE_PATH = "/"
