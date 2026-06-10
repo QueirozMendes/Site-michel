@@ -30,7 +30,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0f0e0c]/95 backdrop-blur-md py-4 border-b border-[#c9a96e]/10"
+          ? "bg-[#0f0e0c]/95 backdrop-blur-md py-4 border-b border-[#A0A0A0]/10"
           : "bg-transparent py-6"
       }`}
     >
@@ -39,7 +39,7 @@ export function Navbar() {
           <span className="cursor-pointer flex items-center gap-3 group">
             <span
               className={`font-serif text-xl tracking-[0.15em] transition-colors duration-300 ${
-                scrolled || !isHome ? "text-[#c9a96e]" : "text-[#c9a96e]"
+                scrolled || !isHome ? "text-[#A0A0A0]" : "text-[#A0A0A0]"
               }`}
             >
               MB
@@ -53,7 +53,7 @@ export function Navbar() {
               <span
                 className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 cursor-pointer ${
                   location === link.href
-                    ? "text-[#c9a96e]"
+                    ? "text-[#A0A0A0]"
                     : scrolled || !isHome
                     ? "text-white/70 hover:text-white"
                     : "text-white/80 hover:text-white"
@@ -82,14 +82,14 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-[#0f0e0c]/98 border-b border-[#c9a96e]/15 px-8 py-8 shadow-2xl md:hidden flex flex-col space-y-6"
+            className="absolute top-full left-0 right-0 bg-[#0f0e0c]/98 border-b border-[#A0A0A0]/15 px-8 py-8 shadow-2xl md:hidden flex flex-col space-y-6"
           >
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <span
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block font-serif text-xl tracking-wide cursor-pointer transition-colors ${
-                    location === link.href ? "text-[#c9a96e]" : "text-white/80 hover:text-white"
+                    location === link.href ? "text-[#A0A0A0]" : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.label}

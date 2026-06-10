@@ -2,7 +2,7 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 import { useState } from "react";
 
-const GOLD = "#c9a96e";
+const GOLD = "#A0A0A0";
 
 export default function Contato() {
   const [sent, setSent] = useState(false);
@@ -45,24 +45,24 @@ export default function Contato() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <label className="block text-xs tracking-[0.2em] uppercase text-white/60 mb-3">Nome</label>
-                    <input required type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#c9a96e] transition-colors text-sm" placeholder="Seu nome" />
+                    <input required type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#A0A0A0] transition-colors text-sm" placeholder="Seu nome" />
                   </div>
                   <div>
                     <label className="block text-xs tracking-[0.2em] uppercase text-white/60 mb-3">Empresa</label>
-                    <input type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#c9a96e] transition-colors text-sm" placeholder="Incorporadora, hotel, etc." />
+                    <input type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#A0A0A0] transition-colors text-sm" placeholder="Incorporadora, hotel, etc." />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs tracking-[0.2em] uppercase text-white/60 mb-3">E-mail</label>
-                  <input required type="email" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#c9a96e] transition-colors text-sm" placeholder="seu@email.com" />
+                  <input required type="email" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#A0A0A0] transition-colors text-sm" placeholder="seu@email.com" />
                 </div>
                 <div>
                   <label className="block text-xs tracking-[0.2em] uppercase text-white/60 mb-3">Tipo de projeto</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#c9a96e] transition-colors text-sm" placeholder="Residencial, hotel, condomínio..." />
+                  <input type="text" className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#A0A0A0] transition-colors text-sm" placeholder="Residencial, hotel, condomínio..." />
                 </div>
                 <div>
                   <label className="block text-xs tracking-[0.2em] uppercase text-white/60 mb-3">Mensagem</label>
-                  <textarea required rows={4} className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#c9a96e] transition-colors text-sm resize-none" placeholder="Conte um pouco sobre o seu projeto..." />
+                  <textarea required rows={4} className="w-full bg-transparent border-b border-white/25 pb-3 text-white placeholder-white/35 outline-none focus:border-[#A0A0A0] transition-colors text-sm resize-none" placeholder="Conte um pouco sobre o seu projeto..." />
                 </div>
                 <div className="pt-4 text-center">
                   <button type="submit" className="border text-xs tracking-[0.2em] uppercase px-14 py-4 hover:opacity-70 transition-all" style={{ borderColor: GOLD, color: GOLD }}>
@@ -71,7 +71,7 @@ export default function Contato() {
                 </div>
               </form>
             ) : (
-              <div className="mt-16 py-16 border border-[#c9a96e]/30 text-center">
+              <div className="mt-16 py-16 border border-[#A0A0A0]/30 text-center">
                 <div className="w-8 h-px mx-auto mb-8" style={{ background: GOLD }} />
                 <h3 className="font-serif text-white text-3xl mb-4">Mensagem recebida</h3>
                 <p className="text-white/70 font-light">Em breve entraremos em contato. Obrigado pelo interesse.</p>

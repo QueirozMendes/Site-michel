@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
-const GOLD = "#c9a96e";
+const GOLD = "#A0A0A0";
 
 const phases = [
   {
@@ -64,7 +64,7 @@ export default function Metodologia() {
               {phases.map((phase, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-16 border-b border-white/10 relative">
-                    <div className="hidden md:flex absolute left-[27px] top-1/2 -translate-y-1/2 w-5 h-5 rotate-45 border border-[#c9a96e]/60 bg-[#0f0e0c] items-center justify-center">
+                    <div className="hidden md:flex absolute left-[27px] top-1/2 -translate-y-1/2 w-5 h-5 rotate-45 border border-[#A0A0A0]/60 bg-[#0f0e0c] items-center justify-center">
                       <div className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
                     </div>
 

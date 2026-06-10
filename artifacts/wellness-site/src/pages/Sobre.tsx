@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
-const GOLD = "#c9a96e";
+const GOLD = "#A0A0A0";
 
 export default function Sobre() {
   return (
@@ -55,7 +55,7 @@ export default function Sobre() {
                   <img src="/portrait.png" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
                 {/* Credenciais */}
-                <div className="border border-[#c9a96e]/20 p-8 bg-white/3">
+                <div className="border border-[#A0A0A0]/20 p-8 bg-white/3">
                   <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: GOLD }}>Credenciais Profissionais</p>
                   <ul className="space-y-4">
                     {[
@@ -74,7 +74,7 @@ export default function Sobre() {
                 </div>
 
                 {/* Case Destaque */}
-                <div className="border border-[#c9a96e]/25 p-8 mt-4 bg-[#c9a96e]/5">
+                <div className="border border-[#A0A0A0]/25 p-8 mt-4 bg-[#A0A0A0]/5">
                   <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: GOLD }}>Caso de Referência</p>
                   <h4 className="font-serif text-white text-xl mb-3">Hotel Rosewood São Paulo</h4>
                   <p className="text-white/50 text-sm leading-relaxed">

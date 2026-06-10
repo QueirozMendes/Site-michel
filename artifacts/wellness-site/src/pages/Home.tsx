@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-const GOLD = "#c9a96e";
+const GOLD = "#A0A0A0";
 
 export default function Home() {
   return (

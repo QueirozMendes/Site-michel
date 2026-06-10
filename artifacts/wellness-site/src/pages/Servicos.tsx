@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
-const GOLD = "#c9a96e";
+const GOLD = "#A0A0A0";
 
 const services = [
   {
