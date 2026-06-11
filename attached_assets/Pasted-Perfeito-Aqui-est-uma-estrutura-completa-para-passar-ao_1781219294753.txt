@@ -1,0 +1,294 @@
+Perfeito. Aqui está uma estrutura completa para passar ao designer, já pensando em um site elegante, premium e institucional para posicionar o Michel como empresário, projetista e referência em wellness, fitness e longevidade.
+Site Michel Bueno
+Estrutura para Designer
+1. Conceito geral do site
+O site deve comunicar Michel como uma autoridade em wellness, longevidade, performance e estruturação de espaços fitness de alto padrão.
+Mais do que personal trainer, o posicionamento deve ser:
+Michel Bueno é um especialista em wellness e longevidade que projeta experiências, espaços e ecossistemas fitness para empreendimentos imobiliários, hotéis, marcas e clientes de alta performance.
+O visual deve ser sofisticado, minimalista, editorial e premium. Algo entre wellness de luxo, arquitetura, lifestyle e performance.
+Referências visuais:
+Rosewood, Aman, Equinox, Six Senses, Technogym, Soho House, marcas de arquitetura e hospitality de luxo.
+Paleta sugerida: preto, off white, areia, cinza quente, verde oliva escuro ou dourado queimado como detalhe.
+
+2. Menu principal
+Home
+Sobre Michel
+Projetos
+Wellness Spaces
+Parcerias
+Mídia
+Contato
+Também pode ter um botão fixo no topo:
+Fale com Michel
+ou
+Solicitar projeto
+
+3. Página Home
+Hero principal
+Imagem forte do Michel em ambiente sofisticado, preferencialmente em um espaço fitness, hotel, rooftop, academia premium ou ambiente arquitetônico.
+Texto principal
+Wellness, performance e longevidade para espaços e pessoas de alto padrão.
+Subtexto
+Michel Bueno desenvolve projetos, experiências e estratégias de wellness para empreendimentos imobiliários, hotéis, marcas e clientes que buscam elevar saúde, performance e lifestyle a um novo nível.
+Botões
+Conheça os projetos
+Solicitar contato
+
+Bloco de autoridade
+Título
+Um novo olhar para wellness, fitness e longevidade.
+Texto
+Com uma trajetória construída entre performance física, treinamento de alto padrão e projetos de wellness, Michel Bueno atua na criação de ambientes, experiências e soluções que unem saúde, estética, funcionalidade e valorização imobiliária.
+Seu trabalho conecta treinamento, arquitetura, comportamento, equipamentos, operação e experiência do usuário, transformando espaços fitness em verdadeiros ativos de valor para marcas, empreendimentos e clientes.
+
+Bloco de atuação
+Título
+Áreas de atuação
+Cards
+Projetos de Espaços Wellness
+Desenvolvimento de academias, studios, áreas de recovery e espaços fitness para empreendimentos imobiliários, hotéis, residências e marcas.
+Consultoria para Empreendimentos
+Estratégia para criar espaços que aumentam percepção de valor, desejo de compra e diferenciação no mercado imobiliário.
+Experiências Wellness
+Criação de ativações, eventos e experiências que conectam movimento, bem-estar, comunidade e lifestyle.
+Performance & Longevidade
+Método de treinamento voltado para força, mobilidade, saúde, estética, longevidade e alta performance.
+
+Bloco de projetos em destaque
+Título
+Projetos realizados
+Cards com imagem, nome e breve descrição:
+Six Wellness Itaim
+Projeto de espaço wellness com foco em treinamento, experiência e lifestyle urbano.
+Six Wellness Vila Nova
+Ambiente fitness desenvolvido para entregar funcionalidade, estética e experiência premium.
+Six Wellness Campinas
+Estruturação de espaço wellness para um público que busca saúde, performance e conforto.
+Rosewood
+Atuação em projeto e experiência wellness dentro de um dos nomes mais relevantes da hospitalidade de luxo.
+
+Bloco de parcerias
+Título
+Parceiros e marcas conectadas ao ecossistema Michel Bueno
+Logos em linha, com estética clean:
+Technogym
+Tryex
+Mitre
+Mentore Bank
+Texto curto
+Michel Bueno desenvolve projetos e experiências em colaboração com marcas que compartilham a mesma visão de excelência, inovação, saúde e alto padrão.
+
+Bloco mídia
+Título
+Michel na mídia
+Destaque
+Jetsetter News
+Texto:
+Michel Bueno assina conteúdos e participa de conversas sobre wellness, longevidade, performance e estilo de vida, levando sua visão para uma audiência conectada a saúde, comportamento e alta performance.
+Botão:
+Ver publicações
+
+Bloco final de contato
+Título
+Vamos desenvolver o próximo projeto wellness?
+Texto
+Para projetos, parcerias, imprensa ou convites institucionais, entre em contato com a equipe Michel Bueno.
+Botões:
+Entrar em contato
+Instagram
+
+4. Página Sobre Michel
+Título
+Michel Bueno
+Subtítulo
+Especialista em wellness, performance e longevidade.
+Biografia
+Michel Bueno é especialista em wellness, performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
+Ao longo de sua trajetória, Michel construiu uma visão que vai além do treinamento físico. Seu trabalho integra saúde, arquitetura, comportamento, estética, equipamentos e experiência do usuário para criar ambientes que promovem movimento, bem-estar e qualidade de vida.
+Com experiência em projetos como Six Wellness, Rosewood e parcerias com marcas como Technogym, Tryex, Mitre e Mentore Bank, Michel atua na interseção entre fitness, lifestyle e valorização imobiliária.
+Sua abordagem combina técnica, sofisticação e visão estratégica, criando soluções que transformam espaços wellness em diferenciais reais para empreendimentos e marcas que desejam se posicionar no mercado de alto padrão.
+
+Versão curta da bio para destaque
+Michel Bueno é especialista em wellness, performance e longevidade, atuando no desenvolvimento de espaços fitness, experiências wellness e projetos estratégicos para empreendimentos, hotéis, marcas e clientes de alto padrão.
+
+5. Página Projetos
+Título
+Projetos realizados
+Subtítulo
+Espaços, experiências e soluções wellness desenvolvidas para marcas, empreendimentos e ambientes de alto padrão.
+Estrutura dos projetos
+Cada projeto pode ter:
+Nome do projeto
+Localização
+Tipo de atuação
+Descrição
+Galeria de imagens
+Principais entregas
+Resultados ou diferenciais
+
+Projeto 1: Six Wellness Itaim
+Localização: Itaim, São Paulo
+Categoria: Espaço wellness / Fitness premium
+Atuação: Desenvolvimento e estruturação de espaço wellness
+Texto
+O Six Wellness Itaim foi desenvolvido com foco em criar uma experiência fitness sofisticada, funcional e conectada ao estilo de vida urbano. O projeto integra treinamento, estética, bem-estar e experiência do usuário em um ambiente pensado para performance, saúde e convivência.
+
+Projeto 2: Six Wellness Vila Nova
+Localização: Vila Nova Conceição, São Paulo
+Categoria: Espaço wellness / Studio premium
+Atuação: Projeto e estruturação de ambiente fitness
+Texto
+No Six Wellness Vila Nova, Michel Bueno participou da concepção de um espaço voltado para movimento, funcionalidade e experiência. O projeto reforça a importância de ambientes fitness bem planejados como parte essencial do lifestyle contemporâneo.
+
+Projeto 3: Six Wellness Campinas
+Localização: Campinas
+Categoria: Wellness / Fitness / Lifestyle
+Atuação: Estruturação de espaço wellness
+Texto
+O Six Wellness Campinas leva o conceito de wellness de alto padrão para um público que busca saúde, performance e qualidade de vida em um ambiente acolhedor, funcional e sofisticado.
+
+Projeto 4: Rosewood
+Categoria: Hotelaria de luxo / Wellness
+Atuação: Experiência e projeto wellness
+Texto
+A atuação junto ao Rosewood reforça a conexão de Michel Bueno com o universo da hospitalidade de luxo, onde wellness, experiência e excelência operacional são pilares fundamentais para entregar valor ao cliente final.
+
+6. Página Wellness Spaces
+Título
+Projetista de espaços wellness para empreendimentos
+Subtítulo
+Transformando áreas fitness em ativos de valor para empreendimentos imobiliários, hotéis, residenciais e marcas.
+Texto principal
+O wellness deixou de ser apenas uma amenidade. Hoje, espaços fitness, áreas de recovery, studios de movimento e ambientes dedicados à longevidade influenciam diretamente a percepção de valor, o desejo de compra e a experiência do usuário dentro de um empreendimento.
+Michel Bueno atua como projetista e consultor na criação de espaços wellness que unem estética, funcionalidade, operação e posicionamento premium.
+Seu trabalho considera não apenas os equipamentos, mas toda a jornada do usuário: circulação, layout, iluminação, materiais, experiência sensorial, tipo de treino, público-alvo, operação, manutenção e potencial de diferenciação comercial.
+
+Blocos de serviço
+Conceito e posicionamento do espaço
+Definição do propósito, público, linguagem estética e experiência desejada.
+Curadoria de equipamentos
+Seleção estratégica de equipamentos, marcas e soluções alinhadas ao perfil do projeto.
+Layout funcional
+Planejamento da disposição dos equipamentos, fluxo de circulação e aproveitamento inteligente da área.
+Experiência do usuário
+Criação de uma jornada sensorial, estética e funcional para quem utiliza o espaço.
+Áreas de recovery e longevidade
+Estruturação de soluções como sauna, crioterapia, mobilidade, respiração, alongamento, recovery e bem-estar.
+Valorização imobiliária
+Desenvolvimento de espaços que aumentam o valor percebido do empreendimento e fortalecem o poder de decisão do comprador.
+
+Para quem é
+Empreendimentos residenciais de alto padrão
+Hotéis e resorts
+Incorporadoras
+Condomínios premium
+Clubes privados
+Studios boutique
+Marcas de wellness
+Residências privadas
+
+Chamada estratégica
+Um espaço wellness bem projetado não é apenas uma academia. É uma ferramenta de desejo, diferenciação e valorização.
+
+7. Página Parcerias
+Título
+Parcerias estratégicas
+Subtítulo
+Michel Bueno colabora com marcas que compartilham uma visão de excelência, inovação e alto padrão no universo wellness.
+Logos
+Technogym
+Tryex
+Mitre
+Mentore Bank
+Texto
+As parcerias de Michel Bueno fortalecem um ecossistema que conecta equipamentos, arquitetura, imóveis, experiências, conteúdo e lifestyle. Cada colaboração é pensada para ampliar o impacto do wellness em diferentes contextos, de empreendimentos imobiliários a projetos privados e experiências de marca.
+
+8. Página Mídia
+Título
+Mídia e conteúdo
+Destaque
+Jetsetter News
+Texto
+Michel Bueno participa da Jetsetter News com conteúdos sobre wellness, treinamento, longevidade, comportamento e alta performance, levando sua visão para uma audiência conectada a saúde, lifestyle e transformação.
+Possíveis blocos
+Artigos publicados
+Entrevistas
+Colunas
+Aparições em eventos
+Press kit
+
+9. Página Contato
+Título
+Contato
+Subtítulo
+Para projetos wellness, parcerias, imprensa ou convites institucionais, entre em contato.
+Campos do formulário
+Nome
+E-mail
+Telefone
+Empresa
+Tipo de interesse
+Mensagem
+Opções de interesse
+Projeto wellness para empreendimento
+Parceria de marca
+Imprensa / mídia
+Evento / palestra
+Consultoria privada
+Outro
+Informações adicionais
+Instagram: colocar link do perfil do Michel
+Jetsetter News: colocar link da coluna ou página
+E-mail profissional: inserir e-mail
+WhatsApp comercial: inserir número, se quiserem usar
+
+10. Tom de voz do site
+O tom deve ser:
+Sofisticado
+Confiante
+Institucional
+Estratégico
+Pouco comercial
+Mais premium e aspiracional
+Com linguagem de negócio, lifestyle e wellness
+Evitar parecer “personal trainer vendendo aula”.
+A ideia é posicionar Michel como especialista, consultor, criador de espaços e empresário do wellness.
+
+11. Frases de impacto para usar no site
+Wellness como estratégia de valor.
+Espaços fitness que elevam empreendimentos, marcas e experiências.
+Performance, longevidade e lifestyle em um novo padrão.
+O futuro dos empreendimentos passa pelo wellness.
+Muito além de uma academia: um ecossistema de saúde, desejo e valorização.
+Criando espaços que movimentam pessoas e valorizam projetos.
+Wellness não é tendência. É decisão de valor.
+
+12. Sugestão de estrutura visual
+O designer pode trabalhar com:
+Fotos grandes em tela cheia
+Muito espaço em branco
+Tipografia elegante e editorial
+Poucos textos por dobra
+Cards minimalistas
+Logos em preto e branco
+Galerias de projetos com imagens arquitetônicas
+Vídeos curtos do Michel em ação
+Botões discretos e sofisticados
+Animações suaves
+Página mobile muito limpa e rápida
+
+13. Estrutura final resumida para o designer
+Home
+Apresentação premium do Michel, chamada principal, áreas de atuação, projetos, parcerias e contato.
+Sobre
+Biografia institucional e posicionamento como especialista em wellness, longevidade e espaços fitness.
+Projetos
+Six Wellness Itaim, Six Wellness Vila Nova, Six Wellness Campinas e Rosewood.
+Wellness Spaces
+Página focada na atuação como projetista de espaços wellness para empreendimentos, hotéis, condomínios e marcas.
+Parcerias
+Logos e texto sobre Technogym, Tryex, Mitre e Mentore Bank.
+Mídia
+Jetsetter News, artigos, entrevistas e conteúdo.
+Contato
+Formulário, Instagram, e-mail e links institucionais.

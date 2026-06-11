@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
-const GOLD = "#A0A0A0";
+const ACCENT = "#A0A0A0";
 
 export default function Sobre() {
   return (
@@ -9,43 +9,36 @@ export default function Sobre() {
       <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
-            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: GOLD }}>— Sobre</p>
+            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Sobre Michel</p>
             <h1 className="text-5xl md:text-7xl font-serif text-white leading-tight">
-              Michel Bueno<br />
-              <span className="italic font-light" style={{ color: GOLD }}>Wellness Design</span>
+              Michel Bueno
             </h1>
+            <p className="mt-4 text-lg md:text-xl font-serif italic" style={{ color: ACCENT }}>
+              Especialista em wellness, performance e longevidade.
+            </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mt-24 items-start">
             <div className="md:col-span-6 space-y-8 text-white/80 font-light text-lg leading-relaxed">
               <FadeIn delay={0.2}>
                 <p>
-                  <strong className="text-white font-normal">Michel Bueno</strong> é Wellness & Longevity Director especializado em projetar ecossistemas de alta performance para empreendimentos de luxo. Com trajetória construída nos ambientes mais exigentes do mercado premium brasileiro, atua na intersecção entre design de espaços, longevidade e experiência do usuário.
+                  <strong className="text-white font-normal">Michel Bueno</strong> é especialista em wellness, performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <p>
-                  Sua metodologia une <strong className="text-white font-normal">estratégia de espaço, curadoria de equipamentos e design sensorial</strong> — transformando academias em ativos de valorização imobiliária e diferencial de lifestyle para incorporadoras, hotéis e empreendimentos de alto padrão.
+                  Ao longo de sua trajetória, Michel construiu uma visão que vai além do treinamento físico. Seu trabalho integra <strong className="text-white font-normal">saúde, arquitetura, comportamento, estética, equipamentos e experiência do usuário</strong> para criar ambientes que promovem movimento, bem-estar e qualidade de vida.
                 </p>
               </FadeIn>
-
               <FadeIn delay={0.4}>
-                <ul className="space-y-6 mt-12">
-                  {[
-                    { title: "Six Wellness Club · Ambassador", desc: "Metodologia de atendimento 6 estrelas, curadoria de equipamentos premium, treinamento de equipe, hospitalidade de alto padrão e desenvolvimento de padrão de excelência na maior rede de academias de luxo do Brasil." },
-                    { title: "Hotel Rosewood São Paulo", desc: "Estruturação completa do fitness center: curadoria de equipamentos, metodologia wellness, hospitalidade e jornada de hóspedes e residentes. Referência mundial em wellness hoteleiro." },
-                    { title: "Consultoria a Academias de Luxo", desc: "Posicionamento, experiência, curadoria e padrão de atendimento para espaços wellness premium." },
-                    { title: "Clientela Exclusiva", desc: "Executivos, celebridades e líderes empresariais — atendimento personalizado de alto padrão." },
-                  ].map((item, i) => (
-                    <li key={i} className="flex gap-6 border-b border-white/8 pb-6 last:border-0">
-                      <div className="w-6 h-px mt-3 flex-shrink-0" style={{ background: GOLD }} />
-                      <div>
-                        <h4 className="text-white text-sm font-normal tracking-wide mb-2">{item.title}</h4>
-                        <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                <p>
+                  Com experiência em projetos como <strong className="text-white font-normal">Six Wellness</strong> e <strong className="text-white font-normal">Rosewood</strong>, e parcerias com marcas como Technogym, Tryex, Mitre e Mentore Bank, Michel atua na interseção entre fitness, lifestyle e valorização imobiliária.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.5}>
+                <p>
+                  Sua abordagem combina técnica, sofisticação e visão estratégica, criando soluções que transformam espaços wellness em diferenciais reais para empreendimentos e marcas que desejam se posicionar no mercado de alto padrão.
+                </p>
               </FadeIn>
             </div>
 
@@ -54,14 +47,23 @@ export default function Sobre() {
                 <div className="aspect-[4/5] overflow-hidden mb-8">
                   <img src="/portrait.png" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
+
+                {/* Bio curta destaque */}
+                <div className="border p-8 bg-white/[0.03]" style={{ borderColor: "rgba(160,160,160,0.25)" }}>
+                  <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>Em resumo</p>
+                  <p className="font-serif text-white text-xl leading-relaxed">
+                    Especialista em wellness, performance e longevidade, atuando no desenvolvimento de espaços fitness, experiências wellness e projetos estratégicos para empreendimentos, hotéis, marcas e clientes de alto padrão.
+                  </p>
+                </div>
+
                 {/* Credenciais */}
-                <div className="border border-[#A0A0A0]/20 p-8 bg-white/3">
-                  <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: GOLD }}>Credenciais Profissionais</p>
+                <div className="border border-white/15 p-8 mt-4">
+                  <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: ACCENT }}>Credenciais</p>
                   <ul className="space-y-4">
                     {[
                       { label: "CREF", value: "105588-G/SP" },
                       { label: "CRECI SP", value: "264629" },
-                      { label: "Mercado", value: "Luxury Fitness & Wellness" },
+                      { label: "Mercado", value: "Wellness & Longevidade" },
                       { label: "Atuação", value: "São Paulo, SP — Brasil" },
                       { label: "Instagram", value: "@michel_bueno" },
                     ].map((cred) => (
@@ -71,15 +73,6 @@ export default function Sobre() {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Case Destaque */}
-                <div className="border border-[#A0A0A0]/25 p-8 mt-4 bg-[#A0A0A0]/5">
-                  <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: GOLD }}>Caso de Referência</p>
-                  <h4 className="font-serif text-white text-xl mb-3">Hotel Rosewood São Paulo</h4>
-                  <p className="text-white/50 text-sm leading-relaxed">
-                    Estruturou do zero o fitness center: curadoria de equipamentos, metodologia wellness proprietária, hospitalidade de alto padrão e jornada completa de hóspedes e residentes. Referência mundial em wellness hoteleiro.
-                  </p>
                 </div>
               </FadeIn>
             </div>

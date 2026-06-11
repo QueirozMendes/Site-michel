@@ -1,6 +1,6 @@
-# [Project name]
+# Michel Bueno — Wellness Design
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A luxury, editorial marketing website positioning Michel Bueno as a wellness, longevity and performance specialist who designs fitness spaces and experiences for premium real estate, hotels, brands and private clients. React + Vite artifact at `artifacts/wellness-site` (slug `wellness-site`, served at `/`).
 
 ## Run & Operate
 
@@ -30,11 +30,21 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Single-language (pt-BR) marketing site, 7 pages routed with Wouter:
+- `/` Home — hero value prop, positioning/authority, áreas de atuação, featured projects, partner wordmarks, mídia (Jetsetter), contact CTA
+- `/sobre` Sobre Michel — institutional bio + credentials
+- `/projetos` Projetos — Six Wellness Itaim/Vila Nova/Campinas + Rosewood
+- `/wellness-spaces` Wellness Spaces — projetista de espaços (6 service blocks + para quem é)
+- `/parcerias` Parcerias — Technogym, Tryex, Mitre, Mentore Bank (typographic wordmarks)
+- `/midia` Mídia — Jetsetter News highlight + content grid
+- `/contato` Contato — client-side form (Nome, E-mail, Telefone, Empresa, Tipo de interesse, Mensagem), success state, no backend
+
+Design language: dark near-black bg `#0f0e0c`, large serif display, neutral gray accent `#A0A0A0`, FadeIn scroll animations.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- **Accent color: neutral gray `#A0A0A0` only.** User explicitly rejected gold/beige (e.g. `#c9a96e`). Do NOT reintroduce gold even though the original designer brief suggests "dourado queimado".
+- This is a content agency building for a client; do not copy any reference site exactly.
 
 ## Gotchas
 
