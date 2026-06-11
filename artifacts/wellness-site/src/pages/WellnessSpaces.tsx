@@ -85,17 +85,15 @@ export default function WellnessSpaces() {
           </div>
 
           {/* Para quem é */}
-          <div className="mt-28 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-            <FadeIn>
-              <div className="md:col-span-4">
-                <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Para quem é</p>
-                <h2 className="font-serif text-white text-3xl md:text-4xl leading-tight">
-                  Quem se beneficia de um espaço bem projetado
-                </h2>
-              </div>
+          <div className="mt-28 grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-10 items-start">
+            <FadeIn className="md:col-span-4">
+              <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Para quem é</p>
+              <h2 className="font-serif text-white text-3xl md:text-4xl leading-tight">
+                Quem se beneficia de um espaço bem projetado
+              </h2>
             </FadeIn>
-            <FadeIn delay={0.15}>
-              <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+            <FadeIn delay={0.15} className="md:col-span-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
                 {paraQuem.map((item, i) => (
                   <div key={i} className="flex items-center gap-4 border-b border-white/10 py-5">
                     <div className="w-5 h-px flex-shrink-0" style={{ background: ACCENT }} />
