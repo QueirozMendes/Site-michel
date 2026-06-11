@@ -45,9 +45,9 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/85 z-10" />
           <img
-            src="/hero.png"
-            alt="Espaço wellness de alto padrão"
-            className="w-full h-full object-cover scale-[1.03] transition-transform duration-[25s] hover:scale-100"
+            src="/hero-michel.jpg"
+            alt="Michel Bueno"
+            className="w-full h-full object-cover object-top scale-[1.03] transition-transform duration-[25s] hover:scale-100"
           />
         </div>
 
@@ -202,7 +202,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.2} direction="up">
             <div className="aspect-[4/3] overflow-hidden">
-              <img src="/service-1.png" alt="Michel na mídia" className="w-full h-full object-cover grayscale-[15%]" />
+              <img src="/midia-michel.jpg" alt="Michel na mídia" className="w-full h-full object-cover object-top grayscale-[15%]" />
             </div>
           </FadeIn>
         </div>

@@ -45,7 +45,7 @@ export default function Sobre() {
             <div className="md:col-span-6">
               <FadeIn delay={0.3} direction="up">
                 <div className="aspect-[4/5] overflow-hidden mb-8">
-                  <img src="/portrait.png" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
+                  <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
 
                 {/* Bio curta destaque */}
