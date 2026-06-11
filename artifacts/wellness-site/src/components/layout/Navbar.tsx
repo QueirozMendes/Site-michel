@@ -19,6 +19,7 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
+    { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre" },
     { href: "/projetos", label: "Projetos" },
     { href: "/wellness-spaces", label: "Wellness Spaces" },

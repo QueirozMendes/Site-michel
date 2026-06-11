@@ -12,6 +12,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-3 text-xs tracking-[0.15em] uppercase">
+          <Link href="/"><span className="hover:text-white transition-colors cursor-pointer">Home</span></Link>
           <Link href="/sobre"><span className="hover:text-white transition-colors cursor-pointer">Sobre</span></Link>
           <Link href="/projetos"><span className="hover:text-white transition-colors cursor-pointer">Projetos</span></Link>
           <Link href="/wellness-spaces"><span className="hover:text-white transition-colors cursor-pointer">Wellness Spaces</span></Link>
