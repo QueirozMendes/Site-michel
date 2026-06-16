@@ -261,10 +261,10 @@ export default function Home() {
 
       {/* Contato CTA */}
       <section className="py-32 px-6 md:px-12 border-t border-white/10 bg-[#0f0e0c]">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto max-w-5xl text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
-              Vamos desenvolver o próximo<br />
+            <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight md:whitespace-nowrap">
+              Vamos desenvolver o próximo{" "}
               <span className="italic font-light" style={{ color: ACCENT }}>projeto wellness?</span>
             </h2>
             <p className="mt-8 text-white/75 font-light leading-relaxed max-w-xl mx-auto">
