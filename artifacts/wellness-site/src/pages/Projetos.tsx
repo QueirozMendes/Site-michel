@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -40,8 +39,6 @@ const projetos = [
 ];
 
 export default function Projetos() {
-  const [active, setActive] = useState(0);
-
   return (
     <PageWrapper>
       <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
@@ -57,80 +54,22 @@ export default function Projetos() {
             </p>
           </FadeIn>
 
-          {/* Desktop: expanding-panel gallery */}
-          <FadeIn delay={0.1}>
-            <div className="mt-20 hidden md:flex gap-2 h-[72vh] min-h-[520px]">
-              {projetos.map((p, i) => {
-                const isActive = active === i;
-                return (
-                  <button
-                    key={i}
-                    type="button"
-                    aria-label={`${p.name} — ${p.category}`}
-                    aria-expanded={isActive}
-                    onMouseEnter={() => setActive(i)}
-                    onFocus={() => setActive(i)}
-                    onClick={() => setActive(i)}
-                    className="relative block text-left overflow-hidden cursor-pointer appearance-none border-0 p-0 m-0 bg-transparent transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-1 focus-visible:ring-white/60"
-                    style={{ flexGrow: isActive ? 6 : 1, flexBasis: 0 }}
-                  >
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                        isActive ? "grayscale-0 scale-100" : "grayscale scale-105 opacity-80"
-                      }`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/10" />
-
-                    {/* Vertical label (inactive) */}
-                    <div
-                      className={`absolute inset-x-0 bottom-8 flex justify-center transition-opacity duration-300 ${
-                        isActive ? "opacity-0 pointer-events-none" : "opacity-100"
-                      }`}
-                    >
-                      <span className="[writing-mode:vertical-rl] rotate-180 text-xs tracking-[0.25em] uppercase text-white/85 whitespace-nowrap">
-                        {p.name}
-                      </span>
-                    </div>
-
-                    {/* Full info (active) */}
-                    <div
-                      className={`absolute inset-x-0 bottom-0 p-8 lg:p-10 transition-all duration-500 ${
-                        isActive ? "opacity-100 translate-y-0 delay-200" : "opacity-0 translate-y-6 pointer-events-none"
-                      }`}
-                    >
-                      <p className="text-[10px] tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>
-                        {p.category}
-                      </p>
-                      <h2 className="font-serif text-white text-3xl lg:text-4xl mb-5 whitespace-nowrap">{p.name}</h2>
-                      <div className="flex flex-wrap gap-x-8 gap-y-2 mb-5 text-[11px] tracking-[0.1em] uppercase text-white/55">
-                        <span>Local · {p.location}</span>
-                        <span>Atuação · {p.role}</span>
-                      </div>
-                      <p className="text-white/75 font-light leading-relaxed max-w-lg text-sm">{p.desc}</p>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </FadeIn>
-
-          {/* Mobile: stacked full cards */}
-          <div className="mt-16 md:hidden space-y-16">
+          <div className="mt-24 space-y-24">
             {projetos.map((p, i) => (
-              <FadeIn key={i} delay={0.05}>
-                <div>
-                  <div className="overflow-hidden aspect-[4/5] mb-6">
-                    <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+              <FadeIn key={i} delay={0.1}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
+                  <div className="[direction:ltr] overflow-hidden aspect-[4/3] group">
+                    <img src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%]" />
                   </div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase mb-3 font-light" style={{ color: ACCENT }}>{p.category}</p>
-                  <h2 className="font-serif text-white text-3xl mb-4">{p.name}</h2>
-                  <div className="flex flex-col gap-1 mb-4 text-[11px] tracking-[0.1em] uppercase text-white/55">
-                    <span>Local · {p.location}</span>
-                    <span>Atuação · {p.role}</span>
+                  <div className="[direction:ltr]">
+                    <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>{p.category}</p>
+                    <h2 className="font-serif text-white text-4xl mb-6">{p.name}</h2>
+                    <div className="flex flex-wrap gap-x-8 gap-y-2 mb-6 text-xs tracking-[0.1em] uppercase text-white/55">
+                      <span>Local · {p.location}</span>
+                      <span>Atuação · {p.role}</span>
+                    </div>
+                    <p className="text-white/75 font-light leading-relaxed">{p.desc}</p>
                   </div>
-                  <p className="text-white/75 font-light leading-relaxed text-sm">{p.desc}</p>
                 </div>
               </FadeIn>
             ))}
