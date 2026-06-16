@@ -63,10 +63,10 @@ export default function Contato() {
                 </div>
                 <div>
                   <label htmlFor="interesse" className={labelClass}>Tipo de interesse</label>
-                  <select id="interesse" name="interesse" required defaultValue="" className={`${inputClass} appearance-none cursor-pointer [&>option]:bg-[#0f0e0c]`}>
-                    <option value="" disabled>Selecione uma opção</option>
+                  <select id="interesse" name="interesse" required defaultValue="" className={`${inputClass} appearance-none cursor-pointer`}>
+                    <option value="" disabled style={{ backgroundColor: "#0f0e0c", color: "#ffffff" }}>Selecione uma opção</option>
                     {interesses.map((i) => (
-                      <option key={i} value={i}>{i}</option>
+                      <option key={i} value={i} style={{ backgroundColor: "#0f0e0c", color: "#ffffff" }}>{i}</option>
                     ))}
                   </select>
                 </div>
