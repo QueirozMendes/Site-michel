@@ -1,21 +1,32 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocation } from "wouter";
 
-const ACCENT = "#A0A0A0";
 const BG = "#0f0e0c";
 const EASE = [0.16, 1, 0.3, 1] as const;
+const MAX_DURATION = 9000;
 
-const WORDS = ["Michel", "Bueno"];
-const LETTER_BASE = 0.55;
-const LETTER_STAGGER = 0.05;
-
-const totalLetters = WORDS.join("").length;
-const lettersDoneAt = LETTER_BASE + totalLetters * LETTER_STAGGER + 0.9;
+const MP4 = `${import.meta.env.BASE_URL}intro.mp4`;
+const WEBM = `${import.meta.env.BASE_URL}intro.webm`;
 
 export default function Intro() {
   const [visible, setVisible] = useState(false);
+  const [location] = useLocation();
   const prevOverflow = useRef("");
   const contentEl = useRef<HTMLElement | null>(null);
+  const reduceMotion = useRef(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    reduceMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  // Play the intro every time the home route is entered.
+  useEffect(() => {
+    if (location === "/" && !reduceMotion.current) {
+      setVisible(true);
+    }
+  }, [location]);
 
   const unlock = useCallback(() => {
     document.body.style.overflow = prevOverflow.current;
@@ -26,15 +37,10 @@ export default function Intro() {
     }
   }, []);
 
+  // Lock scroll + make the background inert while the intro plays.
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!visible) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
-
-    setVisible(true);
-
-    // Lock scroll + make background inert (non-focusable) while the intro plays.
     prevOverflow.current = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const el = document.getElementById("app-content");
@@ -44,72 +50,45 @@ export default function Intro() {
       el.setAttribute("aria-hidden", "true");
     }
 
-    const t = window.setTimeout(() => setVisible(false), 2700);
-    return () => {
-      window.clearTimeout(t);
-      unlock();
-    };
-  }, [unlock]);
-
-  let letterIndex = -1;
+    // Safety net in case the video never fires `ended`.
+    const t = window.setTimeout(() => setVisible(false), MAX_DURATION);
+    return () => window.clearTimeout(t);
+  }, [visible]);
 
   return (
     <AnimatePresence onExitComplete={unlock}>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center px-6"
+          key="intro"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
           style={{ backgroundColor: BG }}
           role="presentation"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, filter: "blur(8px)", transition: { duration: 1, ease: EASE } }}
+          exit={{ opacity: 0, filter: "blur(8px)", transition: { duration: 0.9, ease: EASE } }}
         >
-          {/* Overline */}
-          <motion.p
-            className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-light mb-8 md:mb-10"
-            style={{ color: ACCENT }}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.35, ease: EASE }}
-            exit={{ opacity: 0, y: -10, transition: { duration: 0.6, ease: EASE } }}
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            playsInline
+            preload="auto"
+            onEnded={() => setVisible(false)}
+            onError={() => setVisible(false)}
           >
-            Wellness · Longevidade · Performance
-          </motion.p>
+            <source src={MP4} type="video/mp4" />
+            <source src={WEBM} type="video/webm" />
+          </video>
 
-          {/* Name — letter-by-letter mask reveal */}
-          <motion.h1
-            className="font-serif text-white text-center leading-[1.05] text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex flex-wrap justify-center gap-x-5 md:gap-x-7"
-            exit={{ opacity: 0, y: -24, transition: { duration: 0.8, ease: EASE } }}
+          {/* Subtle vignette for cohesion with the dark theme */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+
+          <button
+            type="button"
+            onClick={() => setVisible(false)}
+            className="absolute bottom-8 right-8 text-[11px] tracking-[0.25em] uppercase text-white/70 hover:text-white border-b border-white/30 hover:border-white pb-1 transition-colors"
           >
-            {WORDS.map((word, w) => (
-              <span key={w} className="inline-flex overflow-hidden py-[0.1em]">
-                {word.split("").map((char, c) => {
-                  letterIndex += 1;
-                  const delay = LETTER_BASE + letterIndex * LETTER_STAGGER;
-                  return (
-                    <motion.span
-                      key={c}
-                      className="inline-block"
-                      initial={{ y: "115%" }}
-                      animate={{ y: 0 }}
-                      transition={{ duration: 0.9, delay, ease: EASE }}
-                    >
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </span>
-            ))}
-          </motion.h1>
-
-          {/* Accent hairline */}
-          <motion.div
-            className="mt-10 md:mt-12 h-px w-40 md:w-56 origin-center"
-            style={{ background: `linear-gradient(90deg, transparent, ${ACCENT}, transparent)` }}
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ duration: 1.1, delay: lettersDoneAt - 0.4, ease: EASE }}
-            exit={{ opacity: 0, transition: { duration: 0.5 } }}
-          />
+            Pular intro
+          </button>
         </motion.div>
       )}
     </AnimatePresence>

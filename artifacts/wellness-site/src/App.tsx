@@ -34,13 +34,13 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Intro />
-        <div id="app-content">
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <Intro />
+          <div id="app-content">
             <Router />
-          </WouterRouter>
-          <Toaster />
-        </div>
+            <Toaster />
+          </div>
+        </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
