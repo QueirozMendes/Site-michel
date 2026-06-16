@@ -40,24 +40,20 @@ export default function Sobre() {
                   Sua abordagem combina técnica, sofisticação e visão estratégica, criando soluções que transformam espaços wellness em diferenciais reais para empreendimentos e marcas que desejam se posicionar no mercado de alto padrão.
                 </p>
               </FadeIn>
-            </div>
 
-            <div className="md:col-span-6">
-              <FadeIn delay={0.3} direction="up">
-                <div className="aspect-[4/5] overflow-hidden mb-8">
-                  <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
-                </div>
-
-                {/* Bio curta destaque */}
+              {/* Bio curta destaque */}
+              <FadeIn delay={0.6}>
                 <div className="border p-8 bg-white/[0.03]" style={{ borderColor: "rgba(160,160,160,0.25)" }}>
                   <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>Em resumo</p>
                   <p className="font-serif text-white text-xl leading-relaxed">
                     Especialista em wellness, performance e longevidade, atuando no desenvolvimento de espaços fitness, experiências wellness e projetos estratégicos para empreendimentos, hotéis, marcas e clientes de alto padrão.
                   </p>
                 </div>
+              </FadeIn>
 
-                {/* Credenciais */}
-                <div className="border border-white/15 p-8 mt-4">
+              {/* Credenciais */}
+              <FadeIn delay={0.7}>
+                <div className="border border-white/15 p-8">
                   <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: ACCENT }}>Credenciais</p>
                   <ul className="space-y-4">
                     {[
@@ -73,6 +69,14 @@ export default function Sobre() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </FadeIn>
+            </div>
+
+            <div className="md:col-span-6">
+              <FadeIn delay={0.3} direction="up">
+                <div className="aspect-[4/5] overflow-hidden md:sticky md:top-32">
+                  <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
               </FadeIn>
             </div>
