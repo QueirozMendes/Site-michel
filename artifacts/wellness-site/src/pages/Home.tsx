@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowRight } from "lucide-react";
 
 const ACCENT = "#A0A0A0";
@@ -38,6 +39,8 @@ const projetos = [
 const partners = ["Technogym", "Tryex", "Mitre", "Mentore Bank"];
 
 export default function Home() {
+  const [activeProjeto, setActiveProjeto] = useState(0);
+  const [, navigate] = useLocation();
   return (
     <PageWrapper>
       {/* Hero */}
@@ -150,9 +153,65 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Desktop: expanding-panel gallery */}
+          <FadeIn>
+            <div className="hidden md:flex gap-2 h-[64vh] min-h-[460px]">
+              {projetos.map((p, i) => {
+                const isActive = activeProjeto === i;
+                return (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={p.name}
+                    aria-expanded={isActive}
+                    onMouseEnter={() => setActiveProjeto(i)}
+                    onFocus={() => setActiveProjeto(i)}
+                    onClick={() => (isActive ? navigate("/projetos") : setActiveProjeto(i))}
+                    className="relative block text-left overflow-hidden cursor-pointer appearance-none border-0 p-0 m-0 bg-transparent transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-1 focus-visible:ring-white/60"
+                    style={{ flexGrow: isActive ? 6 : 1, flexBasis: 0 }}
+                  >
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                        isActive ? "grayscale-0 scale-100" : "grayscale scale-105 opacity-80"
+                      }`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/10" />
+
+                    {/* Vertical label (inactive) */}
+                    <div
+                      className={`absolute inset-x-0 bottom-8 flex justify-center transition-opacity duration-300 ${
+                        isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                      }`}
+                    >
+                      <span className="[writing-mode:vertical-rl] rotate-180 text-xs tracking-[0.25em] uppercase text-white/85 whitespace-nowrap">
+                        {p.name}
+                      </span>
+                    </div>
+
+                    {/* Full info (active) */}
+                    <div
+                      className={`absolute inset-x-0 bottom-0 p-8 lg:p-10 transition-all duration-500 ${
+                        isActive ? "opacity-100 translate-y-0 delay-200" : "opacity-0 translate-y-6 pointer-events-none"
+                      }`}
+                    >
+                      <h3 className="font-serif text-white text-3xl lg:text-4xl mb-4 whitespace-nowrap">{p.name}</h3>
+                      <p className="text-white/75 font-light leading-relaxed max-w-md text-sm mb-6">{p.desc}</p>
+                      <span className="inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase text-white/80 border-b border-white/30 pb-1 whitespace-nowrap">
+                        Ver projeto <ArrowRight size={12} />
+                      </span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </FadeIn>
+
+          {/* Mobile: stacked cards */}
+          <div className="grid grid-cols-1 gap-10 md:hidden">
             {projetos.map((p, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
+              <FadeIn key={i} delay={i * 0.05}>
                 <Link href="/projetos">
                   <div className="group cursor-pointer">
                     <div className="aspect-[16/10] overflow-hidden mb-5">
