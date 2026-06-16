@@ -44,9 +44,9 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/85 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/40 z-10" />
           <img
             src="/hero-michel.jpg"
             alt="Michel Bueno"
@@ -54,37 +54,29 @@ export default function Home() {
           />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-20">
-          <FadeIn delay={0.2}>
-            <p className="text-white/70 tracking-[0.35em] uppercase text-[11px] md:text-xs mb-8 font-light">
-              Michel Bueno · Wellness · Longevidade · Performance
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.4}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] max-w-4xl">
-              Wellness, performance e longevidade<br />
-              <span style={{ color: ACCENT }} className="italic font-light">para espaços e pessoas de alto padrão.</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.6}>
-            <p className="mt-8 max-w-xl text-white/85 font-light text-base md:text-lg leading-relaxed">
-              Michel Bueno desenvolve projetos, experiências e estratégias de wellness para empreendimentos imobiliários, hotéis, marcas e clientes que buscam elevar saúde, performance e lifestyle a um novo nível.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.8}>
-            <div className="flex flex-wrap items-center gap-5 mt-12">
-              <Link href="/projetos">
-                <span className="inline-flex items-center justify-center bg-white text-[#0f0e0c] text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/90 transition-all cursor-pointer">
-                  Conheça os projetos
-                </span>
-              </Link>
-              <Link href="/contato">
-                <span className="inline-flex items-center justify-center border border-white/70 text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/10 transition-all cursor-pointer">
-                  Solicitar contato
-                </span>
-              </Link>
-            </div>
-          </FadeIn>
+        <div className="container mx-auto px-6 md:px-12 relative z-20 pb-16 md:pb-20">
+          <div className="max-w-md">
+            <FadeIn delay={0.2}>
+              <p className="text-white/60 tracking-[0.3em] uppercase text-[10px] mb-4 font-light">
+                Wellness · Longevidade · Performance
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.35}>
+              <h1 className="font-serif text-white text-2xl md:text-[28px] leading-snug font-light">
+                Wellness, performance e longevidade{" "}
+                <span style={{ color: ACCENT }} className="italic">para espaços e pessoas de alto padrão.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.5}>
+              <div className="mt-8">
+                <Link href="/projetos">
+                  <span className="inline-flex items-center justify-center bg-white text-[#0f0e0c] text-[11px] tracking-[0.2em] uppercase px-7 py-3.5 hover:bg-white/90 transition-all cursor-pointer">
+                    Conheça os projetos
+                  </span>
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
