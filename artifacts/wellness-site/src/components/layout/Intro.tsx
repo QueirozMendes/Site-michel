@@ -30,10 +30,9 @@ export default function Intro() {
     if (typeof window === "undefined") return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce || sessionStorage.getItem("mb_intro_seen")) return;
+    if (reduce) return;
 
     setVisible(true);
-    sessionStorage.setItem("mb_intro_seen", "1");
 
     // Lock scroll + make background inert (non-focusable) while the intro plays.
     prevOverflow.current = document.body.style.overflow;
