@@ -64,7 +64,7 @@ export default function Home() {
             <FadeIn delay={0.35}>
               <h1 className="font-serif text-white text-3xl md:text-4xl leading-snug font-light">
                 Wellness, performance e longevidade{" "}
-                <span style={{ color: ACCENT }} className="italic">para espaços e pessoas de alto padrão.</span>
+                <span style={{ color: ACCENT }} className="italic">para espaços<br />e pessoas de alto padrão.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.5}>
