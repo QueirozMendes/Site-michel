@@ -73,7 +73,7 @@ export default function Sobre() {
               </FadeIn>
             </div>
 
-            <div className="md:col-span-6">
+            <div className="md:col-span-6 md:-mt-64">
               <FadeIn delay={0.3} direction="up">
                 <div className="aspect-[4/5] overflow-hidden md:sticky md:top-32">
                   <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
