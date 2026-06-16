@@ -37,7 +37,7 @@ export function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative">
         <Link href="/">
           <span className="cursor-pointer flex items-center gap-3 group">
             <span className="font-serif text-xl tracking-[0.15em] transition-colors duration-300" style={{ color: ACCENT }}>
@@ -46,7 +46,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               <span
@@ -60,18 +60,19 @@ export function Navbar() {
               </span>
             </Link>
           ))}
-          <Link href="/contato">
-            <span
-              className={`text-xs tracking-[0.2em] uppercase px-5 py-2.5 border transition-colors cursor-pointer ${
-                location === "/contato"
-                  ? "bg-white text-[#0f0e0c] border-white"
-                  : "border-white/40 text-white hover:bg-white hover:text-[#0f0e0c]"
-              }`}
-            >
-              Contato
-            </span>
-          </Link>
         </nav>
+
+        <Link href="/contato">
+          <span
+            className={`hidden lg:inline-block text-xs tracking-[0.2em] uppercase px-5 py-2.5 border transition-colors cursor-pointer ${
+              location === "/contato"
+                ? "bg-white text-[#0f0e0c] border-white"
+                : "border-white/40 text-white hover:bg-white hover:text-[#0f0e0c]"
+            }`}
+          >
+            Contato
+          </span>
+        </Link>
 
         <button
           className="lg:hidden text-white transition-colors"
