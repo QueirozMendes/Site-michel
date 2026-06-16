@@ -54,21 +54,24 @@ export default function Projetos() {
             </p>
           </FadeIn>
 
-          <div className="mt-24 space-y-24">
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {projetos.map((p, i) => (
-              <FadeIn key={i} delay={0.1}>
-                <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
-                  <div className="[direction:ltr] overflow-hidden aspect-[4/3] group">
-                    <img src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%]" />
-                  </div>
-                  <div className="[direction:ltr]">
-                    <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>{p.category}</p>
-                    <h2 className="font-serif text-white text-4xl mb-6">{p.name}</h2>
-                    <div className="flex flex-wrap gap-x-8 gap-y-2 mb-6 text-xs tracking-[0.1em] uppercase text-white/55">
+              <FadeIn key={i} delay={(i % 2) * 0.1}>
+                <div className="group relative overflow-hidden aspect-[4/3]">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-10">
+                    <p className="text-[11px] tracking-[0.3em] uppercase mb-3 font-light" style={{ color: ACCENT }}>{p.category}</p>
+                    <h2 className="font-serif text-white text-3xl lg:text-4xl mb-4">{p.name}</h2>
+                    <div className="flex flex-wrap gap-x-6 gap-y-1 mb-4 text-[11px] tracking-[0.1em] uppercase text-white/60">
                       <span>Local · {p.location}</span>
                       <span>Atuação · {p.role}</span>
                     </div>
-                    <p className="text-white/75 font-light leading-relaxed">{p.desc}</p>
+                    <p className="text-white/80 font-light leading-relaxed text-sm max-w-lg">{p.desc}</p>
                   </div>
                 </div>
               </FadeIn>
