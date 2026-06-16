@@ -101,32 +101,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Áreas de atuação */}
-      <section className="py-24 px-6 md:px-12 bg-[#0f0e0c]">
-        <div className="container mx-auto">
-          <FadeIn>
-            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Áreas de atuação</p>
-            <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16">
-              O que <span className="italic font-light" style={{ color: ACCENT }}>desenvolvo</span>
-            </h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-white/10 bg-white/10">
-            {atuacao.map((item, i) => (
-              <FadeIn key={i} delay={i * 0.08}>
-                <div className="bg-[#0f0e0c] p-10 md:p-12 h-full hover:bg-[#161410] transition-colors duration-300 group">
-                  <div className="flex items-start justify-between mb-8">
-                    <div className="w-8 h-px mt-3" style={{ background: ACCENT }} />
-                    <span className="font-serif text-5xl font-light text-white/10 leading-none select-none group-hover:text-white/15 transition-colors">{item.num}</span>
-                  </div>
-                  <h3 className="font-serif text-white text-2xl mb-4">{item.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Projetos em destaque */}
       <section className="py-24 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto">
@@ -213,6 +187,32 @@ export default function Home() {
                     <p className="text-white/65 text-sm leading-relaxed font-light max-w-md">{p.desc}</p>
                   </div>
                 </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Áreas de atuação */}
+      <section className="py-24 px-6 md:px-12 bg-[#0f0e0c]">
+        <div className="container mx-auto">
+          <FadeIn>
+            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Áreas de atuação</p>
+            <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16">
+              O que <span className="italic font-light" style={{ color: ACCENT }}>desenvolvo</span>
+            </h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-white/10 bg-white/10">
+            {atuacao.map((item, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="bg-[#0f0e0c] p-10 md:p-12 h-full hover:bg-[#161410] transition-colors duration-300 group">
+                  <div className="flex items-start justify-between mb-8">
+                    <div className="w-8 h-px mt-3" style={{ background: ACCENT }} />
+                    <span className="font-serif text-5xl font-light text-white/10 leading-none select-none group-hover:text-white/15 transition-colors">{item.num}</span>
+                  </div>
+                  <h3 className="font-serif text-white text-2xl mb-4">{item.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
+                </div>
               </FadeIn>
             ))}
           </div>
