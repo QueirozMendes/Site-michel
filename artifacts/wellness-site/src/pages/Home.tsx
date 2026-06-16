@@ -55,14 +55,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-20 pb-16 md:pb-20">
-          <div className="max-w-md">
+          <div className="max-w-xl">
             <FadeIn delay={0.2}>
               <p className="text-white/60 tracking-[0.3em] uppercase text-[10px] mb-4 font-light">
                 Wellness · Longevidade · Performance
               </p>
             </FadeIn>
             <FadeIn delay={0.35}>
-              <h1 className="font-serif text-white text-2xl md:text-[28px] leading-snug font-light">
+              <h1 className="font-serif text-white text-3xl md:text-4xl leading-snug font-light">
                 Wellness, performance e longevidade{" "}
                 <span style={{ color: ACCENT }} className="italic">para espaços e pessoas de alto padrão.</span>
               </h1>
