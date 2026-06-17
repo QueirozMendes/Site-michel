@@ -75,12 +75,12 @@ export function Navbar() {
           </Link>
 
           <button
-            className="lg:hidden text-white transition-colors"
+            className="lg:hidden relative z-[60] text-white transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={22} strokeWidth={1} /> : <Menu size={22} strokeWidth={1} />}
+            {mobileMenuOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
           </button>
         </div>
       </div>
@@ -88,24 +88,61 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-[#0f0e0c]/98 border-b border-white/15 px-8 py-8 shadow-2xl lg:hidden flex flex-col space-y-6"
+            key="mobile-overlay"
+            initial={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
+            animate={{ clipPath: "circle(150% at calc(100% - 3rem) 2.5rem)" }}
+            exit={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
+            transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
+            className="fixed inset-0 z-50 bg-[#0f0e0c] lg:hidden"
           >
-            {[...navLinks, { href: "/contato", label: "Contato" }].map((link) => (
-              <Link key={link.href} href={link.href}>
-                <span
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block font-serif text-xl tracking-wide cursor-pointer transition-colors ${
-                    location === link.href ? "text-white" : "text-white/70 hover:text-white"
-                  }`}
+            <nav className="flex h-full w-full flex-col justify-center px-10">
+              {[...navLinks, { href: "/contato", label: "Contato" }].map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: 28 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 12 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.22 + i * 0.07,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="overflow-hidden border-b border-white/10 last:border-0"
                 >
-                  {link.label}
-                </span>
-              </Link>
-            ))}
+                  <Link href={link.href}>
+                    <span
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="group flex items-baseline gap-4 py-5 cursor-pointer"
+                    >
+                      <span
+                        className="font-mono text-[0.65rem] tracking-[0.3em] tabular-nums transition-colors duration-300"
+                        style={{ color: location === link.href ? "#fff" : ACCENT }}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span
+                        className={`font-serif text-4xl tracking-tight transition-all duration-300 group-hover:translate-x-2 ${
+                          location === link.href ? "text-white italic" : "text-white/75 group-hover:text-white"
+                        }`}
+                      >
+                        {link.label}
+                      </span>
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="mt-12 text-xs tracking-[0.3em] uppercase font-light"
+                style={{ color: ACCENT }}
+              >
+                Wellness · Longevidade · Performance
+              </motion.p>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
