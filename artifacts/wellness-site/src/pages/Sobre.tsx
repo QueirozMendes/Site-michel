@@ -6,7 +6,7 @@ const ACCENT = "#A0A0A0";
 export default function Sobre() {
   return (
     <PageWrapper>
-      <div className="pt-28 pb-16 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-24 pb-10 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           {/* Foto (mobile) — acima do nome */}
           <FadeIn>
@@ -25,7 +25,7 @@ export default function Sobre() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 md:gap-24 mt-12 md:mt-24 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 md:gap-24 mt-8 md:mt-24 items-start">
             <div className="md:col-span-6 space-y-8 text-white/80 font-light text-lg leading-relaxed">
               <FadeIn delay={0.2}>
                 <p>

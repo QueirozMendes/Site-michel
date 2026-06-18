@@ -41,7 +41,7 @@ const projetos = [
 export default function Projetos() {
   return (
     <PageWrapper>
-      <div className="pt-28 pb-16 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-24 pb-10 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Projetos realizados</p>
@@ -54,7 +54,7 @@ export default function Projetos() {
             </p>
           </FadeIn>
 
-          <div className="mt-12 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="mt-8 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {projetos.map((p, i) => (
               <FadeIn key={i} delay={(i % 2) * 0.1}>
                 <div className="group relative overflow-hidden aspect-[4/3]">
