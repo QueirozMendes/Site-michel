@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Parcerias */}
-      <section className="py-[67px] md:py-28 px-6 md:px-12 bg-[#0f0e0c] border-t border-white/10">
+      <section className="py-[67px] md:py-28 px-6 md:px-12 bg-[#0f0e0c] md:border-t md:border-white/10">
         <div className="container mx-auto text-center">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Parceiros e marcas conectadas ao ecossistema Michel Bueno</p>
