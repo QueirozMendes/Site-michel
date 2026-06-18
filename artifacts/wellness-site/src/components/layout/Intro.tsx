@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "wouter";
 
-const BG = "#0f0e0c";
+const BG = "#000000";
 const EASE = [0.16, 1, 0.3, 1] as const;
 const MAX_DURATION = 10000;
 
