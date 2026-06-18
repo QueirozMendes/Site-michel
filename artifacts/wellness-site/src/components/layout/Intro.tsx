@@ -79,7 +79,7 @@ export default function Intro() {
         >
           <video
             ref={videoRef}
-            className="w-[80%] h-[80%] object-contain"
+            className="w-[64%] h-[64%] object-contain"
             autoPlay
             muted
             playsInline
