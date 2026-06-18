@@ -27,14 +27,14 @@ export default function Midia() {
           {/* Destaque Jetsetter */}
           <FadeIn delay={0.2}>
             <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border border-white/10 p-10 md:p-16">
-              <div>
+              <div className="order-2 md:order-1">
                 <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>Destaque</p>
                 <h2 className="font-serif text-white text-4xl md:text-5xl mb-6">Jetsetter News</h2>
                 <p className="text-white/75 font-light leading-relaxed">
                   Michel Bueno participa da Jetsetter News com conteúdos sobre wellness, treinamento, longevidade, comportamento e alta performance, levando sua visão para uma audiência conectada a saúde, lifestyle e transformação.
                 </p>
               </div>
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="order-1 md:order-2 aspect-[4/3] overflow-hidden">
                 <img src="/portfolio-2.png" alt="Jetsetter News" className="w-full h-full object-cover grayscale-[15%]" />
               </div>
             </div>
