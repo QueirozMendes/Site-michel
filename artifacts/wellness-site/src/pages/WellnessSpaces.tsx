@@ -28,7 +28,7 @@ const paraQuem = [
 export default function WellnessSpaces() {
   return (
     <PageWrapper>
-      <div className="pt-24 pb-10 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-28 pb-14 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Wellness Spaces</p>
@@ -64,7 +64,7 @@ export default function WellnessSpaces() {
           </FadeIn>
 
           {/* Blocos de serviço */}
-          <div className="mt-10 md:mt-28">
+          <div className="mt-14 md:mt-28">
             <FadeIn>
               <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— O que entrego</p>
             </FadeIn>
@@ -85,7 +85,7 @@ export default function WellnessSpaces() {
           </div>
 
           {/* Para quem é */}
-          <div className="mt-10 md:mt-28 grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-10 items-start">
+          <div className="mt-14 md:mt-28 grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-10 items-start">
             <FadeIn className="md:col-span-4">
               <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Para quem é</p>
               <h2 className="font-serif text-white text-3xl md:text-4xl leading-tight">
@@ -106,7 +106,7 @@ export default function WellnessSpaces() {
 
           {/* Chamada estratégica */}
           <FadeIn delay={0.1}>
-            <div className="mt-10 md:mt-28 py-8 md:py-24 text-center border-t border-white/10">
+            <div className="mt-14 md:mt-28 py-12 md:py-24 text-center border-t border-white/10">
               <p className="font-serif text-3xl md:text-5xl text-white leading-snug max-w-4xl mx-auto">
                 Um espaço wellness bem projetado não é apenas uma academia.<br />
                 <span className="italic" style={{ color: ACCENT }}>É uma ferramenta de desejo, diferenciação e valorização.</span>

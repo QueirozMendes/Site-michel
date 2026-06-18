@@ -13,7 +13,7 @@ const partners = [
 export default function Parcerias() {
   return (
     <PageWrapper>
-      <div className="pt-24 pb-10 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-28 pb-14 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Parcerias estratégicas</p>
@@ -28,7 +28,7 @@ export default function Parcerias() {
 
           {/* Logos / wordmarks */}
           <FadeIn delay={0.2}>
-            <div className="mt-8 md:mt-24 grid grid-cols-1 sm:grid-cols-2 border border-white/10">
+            <div className="mt-12 md:mt-24 grid grid-cols-1 sm:grid-cols-2 border border-white/10">
               {partners.map((p, i) => (
                 <div
                   key={i}
@@ -43,7 +43,7 @@ export default function Parcerias() {
 
           {/* Texto */}
           <FadeIn delay={0.15}>
-            <div className="mt-8 md:mt-24 max-w-3xl">
+            <div className="mt-12 md:mt-24 max-w-3xl">
               <p className="text-white/80 font-light text-lg leading-relaxed">
                 As parcerias de Michel Bueno fortalecem um ecossistema que conecta equipamentos, arquitetura, imóveis, experiências, conteúdo e lifestyle. Cada colaboração é pensada para ampliar o impacto do wellness em diferentes contextos, de empreendimentos imobiliários a projetos privados e experiências de marca.
               </p>
