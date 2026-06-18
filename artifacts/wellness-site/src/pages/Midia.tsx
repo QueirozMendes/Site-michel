@@ -34,8 +34,8 @@ export default function Midia() {
                   Michel Bueno participa da Jetsetter News com conteúdos sobre wellness, treinamento, longevidade, comportamento e alta performance, levando sua visão para uma audiência conectada a saúde, lifestyle e transformação.
                 </p>
               </div>
-              <div className="order-1 md:order-2 aspect-[4/3] overflow-hidden">
-                <img src="/portfolio-2.png" alt="Jetsetter News" className="w-full h-full object-cover grayscale-[15%]" />
+              <div className="order-1 md:order-2 aspect-[3/4] overflow-hidden">
+                <img src="/michel-jetsetter.jpg" alt="Michel Bueno" className="w-full h-full object-cover object-top grayscale-[15%]" />
               </div>
             </div>
           </FadeIn>
