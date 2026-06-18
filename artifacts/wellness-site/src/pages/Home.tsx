@@ -80,27 +80,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Autoridade */}
-      <section className="py-36 px-6 md:px-12 bg-[#0f0e0c]">
-        <div className="container mx-auto max-w-4xl">
-          <FadeIn>
-            <p className="text-xs tracking-[0.4em] uppercase mb-8 font-light" style={{ color: ACCENT }}>— Posicionamento</p>
-            <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
-              Um novo olhar para wellness,<br />
-              <span className="italic font-light" style={{ color: ACCENT }}>fitness e longevidade.</span>
-            </h2>
-            <div className="mt-12 space-y-6 text-white/80 font-light text-lg leading-relaxed max-w-3xl">
-              <p>
-                Com uma trajetória construída entre performance física, treinamento de alto padrão e projetos de wellness, Michel Bueno atua na criação de ambientes, experiências e soluções que unem saúde, estética, funcionalidade e valorização imobiliária.
-              </p>
-              <p>
-                Seu trabalho conecta treinamento, arquitetura, comportamento, equipamentos, operação e experiência do usuário, transformando espaços fitness em verdadeiros ativos de valor para marcas, empreendimentos e clientes.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Projetos em destaque */}
       <section className="py-[67px] md:py-24 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto">
@@ -216,6 +195,27 @@ export default function Home() {
                   Conheça a trajetória <ArrowRight size={12} />
                 </span>
               </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Posicionamento */}
+      <section className="py-[67px] md:py-36 px-6 md:px-12 bg-[#0f0e0c]">
+        <div className="container mx-auto max-w-4xl">
+          <FadeIn>
+            <p className="text-xs tracking-[0.4em] uppercase mb-8 font-light" style={{ color: ACCENT }}>— Posicionamento</p>
+            <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
+              Um novo olhar para wellness,<br />
+              <span className="italic font-light" style={{ color: ACCENT }}>fitness e longevidade.</span>
+            </h2>
+            <div className="mt-12 space-y-6 text-white/80 font-light text-lg leading-relaxed max-w-3xl">
+              <p>
+                Com uma trajetória construída entre performance física, treinamento de alto padrão e projetos de wellness, Michel Bueno atua na criação de ambientes, experiências e soluções que unem saúde, estética, funcionalidade e valorização imobiliária.
+              </p>
+              <p>
+                Seu trabalho conecta treinamento, arquitetura, comportamento, equipamentos, operação e experiência do usuário, transformando espaços fitness em verdadeiros ativos de valor para marcas, empreendimentos e clientes.
+              </p>
             </div>
           </FadeIn>
         </div>
