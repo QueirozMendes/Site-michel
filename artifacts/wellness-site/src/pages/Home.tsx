@@ -239,8 +239,8 @@ export default function Home() {
       {/* Mídia */}
       <section className="py-14 md:py-28 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <FadeIn>
-            <div className="order-2 md:order-1">
+          <FadeIn className="order-2 md:order-1">
+            <div>
               <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Michel na mídia</p>
               <h2 className="font-serif text-white text-4xl md:text-5xl leading-tight mb-6">Jetsetter News</h2>
               <p className="text-white/75 font-light leading-relaxed mb-8 max-w-lg">
@@ -253,8 +253,8 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
-          <FadeIn delay={0.2} direction="up">
-            <div className="order-1 md:order-2 aspect-[3/4] overflow-hidden">
+          <FadeIn delay={0.2} direction="up" className="order-1 md:order-2">
+            <div className="aspect-[3/4] overflow-hidden">
               <img src="/michel-jetsetter.jpg" alt="Michel na mídia" className="w-full h-full object-cover object-top grayscale-[15%]" />
             </div>
           </FadeIn>
