@@ -240,20 +240,22 @@ export default function Home() {
       <section className="py-14 md:py-28 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <FadeIn>
-            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Michel na mídia</p>
-            <h2 className="font-serif text-white text-4xl md:text-5xl leading-tight mb-6">Jetsetter News</h2>
-            <p className="text-white/75 font-light leading-relaxed mb-8 max-w-lg">
-              Michel Bueno assina conteúdos e participa de conversas sobre wellness, longevidade, performance e estilo de vida, levando sua visão para uma audiência conectada a saúde, comportamento e alta performance.
-            </p>
-            <Link href="/midia">
-              <span className="inline-flex items-center gap-3 border text-xs tracking-[0.2em] uppercase px-10 py-4 hover:opacity-70 transition-all cursor-pointer" style={{ borderColor: ACCENT, color: "#ffffff" }}>
-                Ver publicações <ArrowRight size={12} />
-              </span>
-            </Link>
+            <div className="order-2 md:order-1">
+              <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Michel na mídia</p>
+              <h2 className="font-serif text-white text-4xl md:text-5xl leading-tight mb-6">Jetsetter News</h2>
+              <p className="text-white/75 font-light leading-relaxed mb-8 max-w-lg">
+                Michel Bueno assina conteúdos e participa de conversas sobre wellness, longevidade, performance e estilo de vida, levando sua visão para uma audiência conectada a saúde, comportamento e alta performance.
+              </p>
+              <Link href="/midia">
+                <span className="inline-flex items-center gap-3 border text-xs tracking-[0.2em] uppercase px-10 py-4 hover:opacity-70 transition-all cursor-pointer" style={{ borderColor: ACCENT, color: "#ffffff" }}>
+                  Ver publicações <ArrowRight size={12} />
+                </span>
+              </Link>
+            </div>
           </FadeIn>
           <FadeIn delay={0.2} direction="up">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src="/midia-michel.jpg" alt="Michel na mídia" className="w-full h-full object-cover object-top grayscale-[15%]" />
+            <div className="order-1 md:order-2 aspect-[3/4] overflow-hidden">
+              <img src="/michel-jetsetter.jpg" alt="Michel na mídia" className="w-full h-full object-cover object-top grayscale-[15%]" />
             </div>
           </FadeIn>
         </div>
