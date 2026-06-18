@@ -8,6 +8,13 @@ export default function Sobre() {
     <PageWrapper>
       <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
+          {/* Foto (mobile) — acima do nome */}
+          <FadeIn>
+            <div className="md:hidden aspect-[3/4] overflow-hidden mb-10">
+              <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover object-top grayscale-[15%]" />
+            </div>
+          </FadeIn>
+
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Sobre Michel</p>
             <h1 className="text-5xl md:text-7xl font-serif text-white leading-tight">
@@ -73,7 +80,7 @@ export default function Sobre() {
               </FadeIn>
             </div>
 
-            <div className="md:col-span-6 md:-mt-64">
+            <div className="hidden md:block md:col-span-6 md:-mt-64">
               <FadeIn delay={0.3} direction="up">
                 <div className="aspect-[4/5] overflow-hidden md:sticky md:top-32">
                   <img src="/portrait-michel.jpg" alt="Michel Bueno" className="w-full h-full object-cover grayscale-[15%]" />
