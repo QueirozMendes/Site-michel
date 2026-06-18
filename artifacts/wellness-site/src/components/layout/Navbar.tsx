@@ -40,9 +40,13 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative">
         {/* Logo (left) */}
         <Link href="/">
-          <span className="cursor-pointer font-serif text-xl lg:text-2xl tracking-[0.15em] transition-colors duration-300" style={{ color: ACCENT }}>
-            MB
-          </span>
+          <img
+            src="/logo-mb.png"
+            alt="Michel Bueno"
+            className={`cursor-pointer w-auto object-contain transition-all duration-300 ${
+              scrolled ? "h-7 lg:h-8" : "h-8 lg:h-10"
+            }`}
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -112,17 +116,17 @@ export function Navbar() {
                   <Link href={link.href}>
                     <span
                       onClick={() => setMobileMenuOpen(false)}
-                      className="group flex items-baseline gap-4 py-5 cursor-pointer"
+                      className="group flex items-baseline gap-4 py-4 cursor-pointer"
                     >
                       <span
-                        className="font-mono text-[0.65rem] tracking-[0.3em] tabular-nums transition-colors duration-300"
+                        className="font-mono text-[0.6rem] tracking-[0.3em] tabular-nums transition-colors duration-300"
                         style={{ color: location === link.href ? "#fff" : ACCENT }}
                       >
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span
-                        className={`font-serif text-4xl tracking-tight transition-all duration-300 group-hover:translate-x-2 ${
-                          location === link.href ? "text-white italic" : "text-white/75 group-hover:text-white"
+                        className={`font-serif text-2xl font-light tracking-wide transition-all duration-300 group-hover:translate-x-2 ${
+                          location === link.href ? "text-white italic" : "text-white/70 group-hover:text-white"
                         }`}
                       >
                         {link.label}
