@@ -7,8 +7,8 @@ export function Footer() {
     <footer className="bg-[#0a0908] text-white/60 py-16 px-6 md:px-12 border-t border-white/10">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
         <div>
-          <span className="font-serif text-lg tracking-[0.15em]" style={{ color: ACCENT }}>MB</span>
-          <p className="mt-2 text-xs tracking-[0.1em] text-white/40 uppercase">Michel Bueno · Wellness · Longevidade · Performance</p>
+          <img src="/logo-mb.png" alt="Michel Bueno" className="h-10 w-auto" />
+          <p className="mt-3 text-xs tracking-[0.1em] text-white/40 uppercase">Michel Bueno · Wellness · Longevidade · Performance</p>
         </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-3 text-xs tracking-[0.15em] uppercase">
@@ -23,7 +23,7 @@ export function Footer() {
 
         <div className="text-left md:text-right text-xs text-white/40 tracking-widest uppercase">
           <p>Wellness · Real Estate · Hospitality</p>
-          <p className="mt-1">São Paulo · Brasil · 2025</p>
+          <p className="mt-1">São Paulo · Brasil · 2026</p>
         </div>
       </div>
     </footer>
