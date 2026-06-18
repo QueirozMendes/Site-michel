@@ -1,0 +1,1 @@
+- [Fixed overlay containing block](fixed-overlay-containing-block.md) — full-screen fixed overlays must be portaled to body, not nested in a backdrop-blur/transform header, or they break when scrolled.

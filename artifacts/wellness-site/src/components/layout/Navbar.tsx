@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,6 +18,21 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [mobileMenuOpen]);
+
+  // Close the menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -80,76 +96,87 @@ export function Navbar() {
 
           <button
             className="lg:hidden relative z-[60] text-white transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            onClick={() => setMobileMenuOpen(true)}
+            aria-label="Abrir menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
+            <Menu size={24} strokeWidth={1} />
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            key="mobile-overlay"
-            initial={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
-            animate={{ clipPath: "circle(150% at calc(100% - 3rem) 2.5rem)" }}
-            exit={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
-            transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
-            className="fixed inset-0 z-50 bg-[#0f0e0c] lg:hidden"
-          >
-            <nav className="flex h-full w-full flex-col justify-center px-10">
-              {[...navLinks, { href: "/contato", label: "Contato" }].map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 28 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 12 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.22 + i * 0.07,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  className="overflow-hidden border-b border-white/10 last:border-0"
-                >
-                  <Link href={link.href}>
-                    <span
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="group flex items-baseline gap-4 py-4 cursor-pointer"
-                    >
-                      <span
-                        className="font-mono text-[0.6rem] tracking-[0.3em] tabular-nums transition-colors duration-300"
-                        style={{ color: location === link.href ? "#fff" : ACCENT }}
-                      >
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span
-                        className={`font-serif text-2xl font-light tracking-wide transition-all duration-300 group-hover:translate-x-2 ${
-                          location === link.href ? "text-white italic" : "text-white/70 group-hover:text-white"
-                        }`}
-                      >
-                        {link.label}
-                      </span>
-                    </span>
-                  </Link>
-                </motion.div>
-              ))}
-
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="mt-12 text-xs tracking-[0.3em] uppercase font-light"
-                style={{ color: ACCENT }}
+      {createPortal(
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              key="mobile-overlay"
+              initial={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
+              animate={{ clipPath: "circle(150% at calc(100% - 3rem) 2.5rem)" }}
+              exit={{ clipPath: "circle(0% at calc(100% - 3rem) 2.5rem)" }}
+              transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
+              className="fixed inset-0 z-[100] bg-[#0f0e0c] lg:hidden"
+            >
+              <button
+                className="absolute top-6 right-6 z-[110] text-white"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Fechar menu"
               >
-                Wellness · Longevidade · Performance
-              </motion.p>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <X size={24} strokeWidth={1} />
+              </button>
+
+              <nav className="flex h-full w-full flex-col justify-center px-10">
+                {[...navLinks, { href: "/contato", label: "Contato" }].map((link, i) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 12 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.22 + i * 0.07,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="overflow-hidden border-b border-white/10 last:border-0"
+                  >
+                    <Link href={link.href}>
+                      <span
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="group flex items-baseline gap-4 py-4 cursor-pointer"
+                      >
+                        <span
+                          className="font-mono text-[0.6rem] tracking-[0.3em] tabular-nums transition-colors duration-300"
+                          style={{ color: location === link.href ? "#fff" : ACCENT }}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span
+                          className={`font-serif text-2xl font-light tracking-wide transition-all duration-300 group-hover:translate-x-2 ${
+                            location === link.href ? "text-white italic" : "text-white/70 group-hover:text-white"
+                          }`}
+                        >
+                          {link.label}
+                        </span>
+                      </span>
+                    </Link>
+                  </motion.div>
+                ))}
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  className="mt-12 text-xs tracking-[0.3em] uppercase font-light"
+                  style={{ color: ACCENT }}
+                >
+                  Wellness · Longevidade · Performance
+                </motion.p>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </header>
   );
 }
