@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Projetos em destaque */}
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-[#0f0e0c]">
+      <section className="py-[67px] md:py-24 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto">
           <FadeIn>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Áreas de atuação */}
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-[#0f0e0c]">
+      <section className="py-[67px] md:py-24 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Áreas de atuação</p>
@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Parcerias */}
-      <section className="py-16 md:py-28 px-6 md:px-12 bg-[#0f0e0c] border-t border-white/10">
+      <section className="py-[67px] md:py-28 px-6 md:px-12 bg-[#0f0e0c] border-t border-white/10">
         <div className="container mx-auto text-center">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Parceiros e marcas conectadas ao ecossistema Michel Bueno</p>
@@ -237,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* Mídia */}
-      <section className="py-16 md:py-28 px-6 md:px-12 bg-[#0f0e0c]">
+      <section className="py-[67px] md:py-28 px-6 md:px-12 bg-[#0f0e0c]">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <FadeIn className="order-2 md:order-1">
             <div>
