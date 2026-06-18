@@ -14,7 +14,7 @@ const blocos = [
 export default function Midia() {
   return (
     <PageWrapper>
-      <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-28 pb-16 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Mídia e conteúdo</p>
@@ -41,7 +41,7 @@ export default function Midia() {
           </FadeIn>
 
           {/* Blocos de conteúdo */}
-          <div className="mt-24">
+          <div className="mt-12 md:mt-24">
             <FadeIn>
               <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Conteúdo</p>
             </FadeIn>

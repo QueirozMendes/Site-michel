@@ -23,7 +23,7 @@ export default function Contato() {
 
   return (
     <PageWrapper>
-      <div className="pt-40 pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
+      <div className="pt-28 pb-16 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto max-w-3xl">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-8 font-light text-center" style={{ color: ACCENT }}>— Contato</p>
