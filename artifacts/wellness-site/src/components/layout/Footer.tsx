@@ -23,6 +23,7 @@ export function Footer() {
 
         <div className="text-left md:text-right text-xs text-white/40 tracking-widest uppercase">
           <p>Wellness · Real Estate · Hospitality</p>
+          <p className="mt-1">CNPJ 32.404.305/0001-55</p>
           <p className="mt-1">São Paulo · Brasil · 2026</p>
         </div>
       </div>
