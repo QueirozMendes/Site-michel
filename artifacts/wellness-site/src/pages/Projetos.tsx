@@ -33,7 +33,7 @@ const projetos: Projeto[] = [
     category: "Hotelaria de luxo / Wellness",
     role: "Layout, seleção de aparelhos e metodologia de treinamento",
     desc: "No Rosewood São Paulo, um dos endereços mais relevantes da hotelaria de luxo internacional, Michel colaborou na concepção do layout do fitness center, projetou a seleção de aparelhos e desenvolveu a metodologia de treinamento aplicada ao espaço. Seu trabalho se estendeu à criação da jornada do residente e do hóspede, além da curadoria de eventos wellness — unindo rigor técnico à excelência em hospitalidade que define a marca.",
-    img: "/rosewood-cover.jpg",
+    img: "/rosewood-cover.webp",
     video: "/rosewood-video.mp4",
     poster: "/rosewood-video-poster.jpg",
     gallery: Array.from({ length: 20 }, (_, i) => `/gallery-rosewood-${i + 1}.jpg`),
