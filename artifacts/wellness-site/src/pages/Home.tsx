@@ -31,7 +31,7 @@ const atuacao = [
 
 const projetos = [
   { img: "/gallery-six-1.jpg", name: "Six Wellness Club — Itaim", desc: "Experiência do usuário e jornada do cliente em um clube wellness premium no coração do Itaim." },
-  { img: "/gallery-rosewood-1.jpg", name: "Rosewood São Paulo", desc: "Layout do fitness center, seleção de aparelhos e metodologia de treinamento em um ícone da hotelaria de luxo." },
+  { img: "/rosewood-cover.jpg", name: "Rosewood São Paulo", desc: "Layout do fitness center, seleção de aparelhos e metodologia de treinamento em um ícone da hotelaria de luxo." },
 ];
 
 const partners = ["Technogym", "Tryex", "Mitre", "Mentore Bank"];
