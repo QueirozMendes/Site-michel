@@ -33,7 +33,7 @@ const projetos = [
   { img: "/portfolio-1.png", name: "Six Wellness Itaim", desc: "Projeto de espaço wellness com foco em treinamento, experiência e lifestyle urbano." },
   { img: "/portfolio-2.png", name: "Six Wellness Vila Nova", desc: "Ambiente fitness desenvolvido para entregar funcionalidade, estética e experiência premium." },
   { img: "/portfolio-3.png", name: "Six Wellness Campinas", desc: "Estruturação de espaço wellness para um público que busca saúde, performance e conforto." },
-  { img: "/portfolio-4.png", name: "Rosewood", desc: "Atuação em projeto e experiência wellness dentro de um dos nomes mais relevantes da hospitalidade de luxo." },
+  { img: "/gallery-rosewood-1.jpg", name: "Rosewood", desc: "Atuação em projeto e experiência wellness dentro de um dos nomes mais relevantes da hospitalidade de luxo." },
 ];
 
 const partners = ["Technogym", "Tryex", "Mitre", "Mentore Bank"];
