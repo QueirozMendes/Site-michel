@@ -34,7 +34,14 @@ const projetos = [
   { img: "/rosewood-cover.jpg", name: "Rosewood São Paulo", desc: "Layout do fitness center, seleção de aparelhos e metodologia de treinamento em um ícone da hotelaria de luxo." },
 ];
 
-const partners = ["Technogym", "Tryex", "Mitre", "Mentore Bank"];
+const partners = [
+  { name: "Technogym", src: "/partner-technogym.png" },
+  { name: "Tryex", src: "/partner-tryex.png" },
+  { name: "Six Wellness Club", src: "/partner-six.png" },
+  { name: "Mitre", src: "/partner-mitre.png" },
+  { name: "Mentore Bank", src: "/partner-mentore.png" },
+  { name: "Daslu", src: "/partner-daslu.png" },
+];
 
 export default function Home() {
   const [activeProjeto, setActiveProjeto] = useState(0);
@@ -250,9 +257,19 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Parceiros e marcas conectadas ao ecossistema Michel Bueno</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border border-white/10 mb-12">
               {partners.map((p) => (
-                <span key={p} className="font-serif text-2xl md:text-3xl text-white/55 tracking-wide hover:text-white/80 transition-colors">{p}</span>
+                <div
+                  key={p.name}
+                  className="flex items-center justify-center h-28 md:h-32 px-6 bg-[#0f0e0c] hover:bg-white/[0.04] transition-colors duration-500"
+                >
+                  <img
+                    src={p.src}
+                    alt={p.name}
+                    loading="lazy"
+                    className="max-h-12 md:max-h-14 max-w-[78%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"
+                  />
+                </div>
               ))}
             </div>
             <p className="text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
