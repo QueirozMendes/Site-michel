@@ -185,10 +185,10 @@ export default function Home() {
               <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Sobre Michel</p>
               <h2 className="font-serif text-white text-4xl md:text-5xl leading-tight mb-6">Michel Bueno</h2>
               <p className="text-white/75 font-light leading-relaxed mb-6 max-w-lg">
-                Especialista em wellness, performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
+                Projetista wellness e especialista em performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
               </p>
               <p className="text-white/75 font-light leading-relaxed mb-8 max-w-lg">
-                Seu trabalho integra saúde, arquitetura, comportamento, estética, equipamentos e experiência do usuário, criando ambientes que promovem movimento, bem-estar e valorização imobiliária.
+                Mais do que um projetista, Michel é um designer de experiências de bem-estar, que pensa o wellness como linguagem de luxo, saúde como ativo de valor e cada espaço como uma oportunidade de elevar a forma como as pessoas vivem.
               </p>
               <Link href="/sobre">
                 <span className="inline-flex items-center gap-3 border text-xs tracking-[0.2em] uppercase px-10 py-4 hover:opacity-70 transition-all cursor-pointer" style={{ borderColor: ACCENT, color: "#ffffff" }}>

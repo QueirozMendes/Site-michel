@@ -21,7 +21,7 @@ export default function Sobre() {
               Michel Bueno
             </h1>
             <p className="mt-4 text-lg md:text-xl font-serif italic" style={{ color: ACCENT }}>
-              Especialista em wellness, performance e longevidade.
+              Projetista wellness. Especialista em performance e longevidade.
             </p>
           </FadeIn>
 
@@ -29,22 +29,22 @@ export default function Sobre() {
             <div className="md:col-span-6 space-y-8 text-white/80 font-light text-lg leading-relaxed">
               <FadeIn delay={0.2}>
                 <p>
-                  <strong className="text-white font-normal">Michel Bueno</strong> é especialista em wellness, performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
+                  <strong className="text-white font-normal">Michel Bueno</strong> é projetista wellness e especialista em performance e longevidade, com atuação voltada ao desenvolvimento de espaços fitness, experiências wellness e projetos de alto padrão para empreendimentos imobiliários, hotéis, marcas e clientes privados.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <p>
-                  Ao longo de sua trajetória, Michel construiu uma visão que vai além do treinamento físico. Seu trabalho integra <strong className="text-white font-normal">saúde, arquitetura, comportamento, estética, equipamentos e experiência do usuário</strong> para criar ambientes que promovem movimento, bem-estar e qualidade de vida.
+                  Sua trajetória nasce do treinamento de alta performance, anos dedicados a formar executivos, lideranças e personalidades que exigem precisão técnica e resultado real. Dessa vivência, Michel desenvolveu uma visão que vai além do exercício físico: ela integra <strong className="text-white font-normal">saúde, arquitetura, comportamento, estética, tecnologia e experiência do usuário</strong> para criar ambientes que promovem movimento, bem-estar e longevidade.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
                 <p>
-                  Com experiência em projetos como <strong className="text-white font-normal">Six Wellness</strong> e <strong className="text-white font-normal">Rosewood</strong>, e parcerias com marcas como Technogym, Tryex, Mitre e Mentore Bank, Michel atua na interseção entre fitness, lifestyle e valorização imobiliária.
+                  Com passagens por <strong className="text-white font-normal">academias de luxo e hotéis 6 estrelas</strong>, Michel atua hoje na interseção entre fitness, lifestyle e valorização imobiliária, desenhando não apenas treinos, mas jornadas. Sua abordagem une rigor técnico, sensibilidade estética e visão estratégica, transformando espaços wellness em verdadeiros diferenciais competitivos para marcas e empreendimentos que desejam se posicionar no mais alto padrão do mercado.
                 </p>
               </FadeIn>
               <FadeIn delay={0.5}>
                 <p>
-                  Sua abordagem combina técnica, sofisticação e visão estratégica, criando soluções que transformam espaços wellness em diferenciais reais para empreendimentos e marcas que desejam se posicionar no mercado de alto padrão.
+                  Mais do que um projetista, Michel é um <strong className="text-white font-normal">designer de experiências de bem-estar</strong>, um especialista que pensa o wellness como linguagem de luxo, saúde como ativo de valor, e cada espaço como uma oportunidade de elevar a forma como as pessoas vivem.
                 </p>
               </FadeIn>
 
