@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
         <div>
           <img src="/logo-mb.png" alt="Michel Bueno" className="h-10 w-auto" />
-          <p className="mt-3 text-xs tracking-[0.1em] text-white/40 uppercase">Michel Bueno · Wellness · Longevidade · Performance</p>
+          <p className="mt-3 text-xs tracking-[0.1em] text-white/40 uppercase">Michel Bueno · Wellness · Design · Longevidade · Performance</p>
         </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-3 text-xs tracking-[0.15em] uppercase">

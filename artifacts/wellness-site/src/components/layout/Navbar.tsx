@@ -169,7 +169,7 @@ export function Navbar() {
                   className="mt-12 text-xs tracking-[0.3em] uppercase font-light"
                   style={{ color: ACCENT }}
                 >
-                  Wellness · Longevidade · Performance
+                  Wellness · Design · Longevidade · Performance
                 </motion.p>
               </nav>
             </motion.div>

@@ -63,7 +63,7 @@ export default function Home() {
           <div className="max-w-xl">
             <FadeIn delay={0.2}>
               <p className="text-white/60 tracking-[0.3em] uppercase text-[10px] mb-4 font-light">
-                Wellness · Longevidade · Performance
+                Wellness · Design · Longevidade · Performance
               </p>
             </FadeIn>
             <FadeIn delay={0.35}>
