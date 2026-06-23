@@ -24,7 +24,7 @@ const projetos: Projeto[] = [
     category: "Espaço wellness / Fitness premium",
     role: "Experiência do usuário e jornada do cliente",
     desc: "No Six Wellness Club, unidade Itaim, Michel desenvolveu toda a experiência do usuário e a jornada do cliente — da chegada ao acolhimento, do primeiro treino à construção de um vínculo contínuo com o espaço. Cada detalhe foi pensado para transformar o ato de treinar em uma experiência fluida, intuitiva e memorável, elevando o padrão de atendimento ao nível dos clubes wellness mais exclusivos do país.",
-    img: "/gallery-six-1.jpg",
+    img: "/six-cover.png",
     gallery: Array.from({ length: 3 }, (_, i) => `/gallery-six-${i + 1}.jpg`),
   },
   {
