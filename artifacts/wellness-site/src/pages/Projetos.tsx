@@ -5,20 +5,24 @@ import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react";
 
 const ACCENT = "#A0A0A0";
 
-const projetos = [
+type Projeto = {
+  name: string;
+  location: string;
+  category: string;
+  role: string;
+  desc: string;
+  img: string;
+  gallery?: string[];
+};
+
+const projetos: Projeto[] = [
   {
     name: "Six Wellness Itaim",
     location: "Itaim, São Paulo",
     category: "Espaço wellness / Fitness premium",
     role: "Desenvolvimento e estruturação de espaço wellness",
     desc: "O Six Wellness Itaim foi desenvolvido com foco em criar uma experiência fitness sofisticada, funcional e conectada ao estilo de vida urbano. O projeto integra treinamento, estética, bem-estar e experiência do usuário em um ambiente pensado para performance, saúde e convivência.",
-    gallery: [
-      "/gallery-itaim-1.jpg",
-      "/gallery-itaim-2.jpg",
-      "/gallery-itaim-3.jpg",
-      "/gallery-itaim-4.jpg",
-      "/gallery-itaim-5.jpg",
-    ],
+    img: "/portfolio-1.png",
   },
   {
     name: "Six Wellness Vila Nova",
@@ -26,13 +30,7 @@ const projetos = [
     category: "Espaço wellness / Studio premium",
     role: "Projeto e estruturação de ambiente fitness",
     desc: "No Six Wellness Vila Nova, Michel Bueno participou da concepção de um espaço voltado para movimento, funcionalidade e experiência. O projeto reforça a importância de ambientes fitness bem planejados como parte essencial do lifestyle contemporâneo.",
-    gallery: [
-      "/gallery-vilanova-1.jpg",
-      "/gallery-vilanova-2.jpg",
-      "/gallery-vilanova-3.jpg",
-      "/gallery-vilanova-4.jpg",
-      "/gallery-vilanova-5.jpg",
-    ],
+    img: "/portfolio-2.png",
   },
   {
     name: "Six Wellness Campinas",
@@ -40,13 +38,7 @@ const projetos = [
     category: "Wellness / Fitness / Lifestyle",
     role: "Estruturação de espaço wellness",
     desc: "O Six Wellness Campinas leva o conceito de wellness de alto padrão para um público que busca saúde, performance e qualidade de vida em um ambiente acolhedor, funcional e sofisticado.",
-    gallery: [
-      "/gallery-campinas-1.jpg",
-      "/gallery-campinas-2.jpg",
-      "/gallery-campinas-3.jpg",
-      "/gallery-campinas-4.jpg",
-      "/gallery-campinas-5.jpg",
-    ],
+    img: "/portfolio-3.png",
   },
   {
     name: "Rosewood",
@@ -54,13 +46,8 @@ const projetos = [
     category: "Hotelaria de luxo / Wellness",
     role: "Experiência e projeto wellness",
     desc: "A atuação junto ao Rosewood reforça a conexão de Michel Bueno com o universo da hospitalidade de luxo, onde wellness, experiência e excelência operacional são pilares fundamentais para entregar valor ao cliente final.",
-    gallery: [
-      "/gallery-rosewood-1.jpg",
-      "/gallery-rosewood-2.jpg",
-      "/gallery-rosewood-3.jpg",
-      "/gallery-rosewood-4.jpg",
-      "/gallery-rosewood-5.jpg",
-    ],
+    img: "/gallery-rosewood-1.jpg",
+    gallery: Array.from({ length: 20 }, (_, i) => `/gallery-rosewood-${i + 1}.jpg`),
   },
 ];
 
@@ -78,7 +65,7 @@ export default function Projetos() {
 
   const closeLightbox = useCallback(() => setActiveProject(null), []);
 
-  const gallery = activeProject !== null ? projetos[activeProject].gallery : [];
+  const gallery = (activeProject !== null ? projetos[activeProject].gallery : []) ?? [];
 
   const next = useCallback(() => {
     setPhotoIndex((i) => (gallery.length ? (i + 1) % gallery.length : 0));
@@ -122,27 +109,23 @@ export default function Projetos() {
           </FadeIn>
 
           <div className="mt-12 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {projetos.map((p, i) => (
-              <FadeIn key={i} delay={(i % 2) * 0.1}>
-                <button
-                  type="button"
-                  onClick={(e) => openLightbox(i, e)}
-                  className="group relative block w-full text-left overflow-hidden aspect-[4/3] cursor-pointer"
-                  aria-label={`Ver galeria de ${p.name}`}
-                >
+            {projetos.map((p, i) => {
+              const hasGallery = !!p.gallery && p.gallery.length > 0;
+              const cardInner = (
+                <>
                   <img
-                    src={p.gallery[0]}
+                    src={p.img}
                     alt={p.name}
                     loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%]"
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 grayscale-[20%] ${hasGallery ? "group-hover:scale-105" : ""}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
-                  <span
-                    className="absolute top-6 right-6 flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.2em] uppercase backdrop-blur-sm bg-black/30 border border-white/20 text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  >
-                    <Expand size={12} /> {p.gallery.length} fotos
-                  </span>
+                  {hasGallery && (
+                    <span className="absolute top-6 right-6 flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.2em] uppercase backdrop-blur-sm bg-black/30 border border-white/20 text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <Expand size={12} /> {p.gallery!.length} fotos
+                    </span>
+                  )}
 
                   <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-10">
                     <p className="text-[11px] tracking-[0.3em] uppercase mb-3 font-light" style={{ color: ACCENT }}>{p.category}</p>
@@ -153,9 +136,28 @@ export default function Projetos() {
                     </div>
                     <p className="text-white/80 font-light leading-relaxed text-sm max-w-lg">{p.desc}</p>
                   </div>
-                </button>
-              </FadeIn>
-            ))}
+                </>
+              );
+
+              return (
+                <FadeIn key={i} delay={(i % 2) * 0.1}>
+                  {hasGallery ? (
+                    <button
+                      type="button"
+                      onClick={(e) => openLightbox(i, e)}
+                      className="group relative block w-full text-left overflow-hidden aspect-[4/3] cursor-pointer"
+                      aria-label={`Ver galeria de ${p.name}`}
+                    >
+                      {cardInner}
+                    </button>
+                  ) : (
+                    <div className="group relative overflow-hidden aspect-[4/3]">
+                      {cardInner}
+                    </div>
+                  )}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </div>
