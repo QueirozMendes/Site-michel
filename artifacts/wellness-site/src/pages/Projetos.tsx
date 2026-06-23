@@ -19,19 +19,19 @@ type Projeto = {
 
 const projetos: Projeto[] = [
   {
-    name: "Six Wellness",
-    location: "São Paulo · Campinas",
+    name: "Six Wellness Club — Itaim",
+    location: "Itaim · São Paulo",
     category: "Espaço wellness / Fitness premium",
-    role: "Desenvolvimento e estruturação de espaços wellness",
-    desc: "O Six Wellness reúne espaços fitness sofisticados, funcionais e conectados ao estilo de vida de alto padrão. Cada unidade integra treinamento, estética, bem-estar e experiência do usuário em ambientes pensados para performance, saúde e convivência.",
+    role: "Experiência do usuário e jornada do cliente",
+    desc: "No Six Wellness Club, unidade Itaim, Michel desenvolveu toda a experiência do usuário e a jornada do cliente — da chegada ao acolhimento, do primeiro treino à construção de um vínculo contínuo com o espaço. Cada detalhe foi pensado para transformar o ato de treinar em uma experiência fluida, intuitiva e memorável, elevando o padrão de atendimento ao nível dos clubes wellness mais exclusivos do país.",
     img: "/portfolio-1.png",
   },
   {
-    name: "Rosewood",
+    name: "Rosewood São Paulo",
     location: "São Paulo",
     category: "Hotelaria de luxo / Wellness",
-    role: "Experiência e projeto wellness",
-    desc: "A atuação junto ao Rosewood reforça a conexão de Michel Bueno com o universo da hospitalidade de luxo, onde wellness, experiência e excelência operacional são pilares fundamentais para entregar valor ao cliente final.",
+    role: "Layout, seleção de aparelhos e metodologia de treinamento",
+    desc: "No Rosewood São Paulo, um dos endereços mais relevantes da hotelaria de luxo internacional, Michel colaborou na concepção do layout do fitness center, projetou a seleção de aparelhos e desenvolveu a metodologia de treinamento aplicada ao espaço. Seu trabalho se estendeu à criação da jornada do residente e do hóspede, além da curadoria de eventos wellness — unindo rigor técnico à excelência em hospitalidade que define a marca.",
     img: "/gallery-rosewood-1.jpg",
     video: "/rosewood-video.mp4",
     poster: "/rosewood-video-poster.jpg",
