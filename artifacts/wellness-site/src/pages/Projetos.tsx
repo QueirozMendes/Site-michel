@@ -102,8 +102,8 @@ export default function Projetos() {
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Projetos realizados</p>
             <h1 className="text-5xl md:text-7xl font-serif text-white leading-tight">
-              Projetos<br />
-              <span className="italic font-light" style={{ color: ACCENT }}>realizados</span>
+              Espaços que<br />
+              <span className="italic font-light" style={{ color: ACCENT }}>movimentam valor</span>
             </h1>
             <p className="mt-8 max-w-2xl text-white/75 font-light leading-relaxed">
               Espaços, experiências e soluções wellness desenvolvidas para marcas, empreendimentos e ambientes de alto padrão. Clique em um projeto para ver a galeria.
