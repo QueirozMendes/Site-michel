@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { FadeIn } from "@/components/ui/fade-in";
-import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Expand, Play, Volume2, VolumeX } from "lucide-react";
 
 const ACCENT = "#A0A0A0";
 
@@ -13,32 +13,18 @@ type Projeto = {
   desc: string;
   img: string;
   gallery?: string[];
+  video?: string;
+  poster?: string;
 };
 
 const projetos: Projeto[] = [
   {
-    name: "Six Wellness Itaim",
-    location: "Itaim, São Paulo",
+    name: "Six Wellness",
+    location: "São Paulo · Campinas",
     category: "Espaço wellness / Fitness premium",
-    role: "Desenvolvimento e estruturação de espaço wellness",
-    desc: "O Six Wellness Itaim foi desenvolvido com foco em criar uma experiência fitness sofisticada, funcional e conectada ao estilo de vida urbano. O projeto integra treinamento, estética, bem-estar e experiência do usuário em um ambiente pensado para performance, saúde e convivência.",
+    role: "Desenvolvimento e estruturação de espaços wellness",
+    desc: "O Six Wellness reúne espaços fitness sofisticados, funcionais e conectados ao estilo de vida de alto padrão. Cada unidade integra treinamento, estética, bem-estar e experiência do usuário em ambientes pensados para performance, saúde e convivência.",
     img: "/portfolio-1.png",
-  },
-  {
-    name: "Six Wellness Vila Nova",
-    location: "Vila Nova Conceição, São Paulo",
-    category: "Espaço wellness / Studio premium",
-    role: "Projeto e estruturação de ambiente fitness",
-    desc: "No Six Wellness Vila Nova, Michel Bueno participou da concepção de um espaço voltado para movimento, funcionalidade e experiência. O projeto reforça a importância de ambientes fitness bem planejados como parte essencial do lifestyle contemporâneo.",
-    img: "/portfolio-2.png",
-  },
-  {
-    name: "Six Wellness Campinas",
-    location: "Campinas",
-    category: "Wellness / Fitness / Lifestyle",
-    role: "Estruturação de espaço wellness",
-    desc: "O Six Wellness Campinas leva o conceito de wellness de alto padrão para um público que busca saúde, performance e qualidade de vida em um ambiente acolhedor, funcional e sofisticado.",
-    img: "/portfolio-3.png",
   },
   {
     name: "Rosewood",
@@ -47,9 +33,22 @@ const projetos: Projeto[] = [
     role: "Experiência e projeto wellness",
     desc: "A atuação junto ao Rosewood reforça a conexão de Michel Bueno com o universo da hospitalidade de luxo, onde wellness, experiência e excelência operacional são pilares fundamentais para entregar valor ao cliente final.",
     img: "/gallery-rosewood-1.jpg",
+    video: "/rosewood-video.mp4",
+    poster: "/rosewood-video-poster.jpg",
     gallery: Array.from({ length: 20 }, (_, i) => `/gallery-rosewood-${i + 1}.jpg`),
   },
 ];
+
+type Media =
+  | { type: "image"; src: string }
+  | { type: "video"; src: string; poster: string };
+
+function getMedia(p: Projeto): Media[] {
+  const items: Media[] = [];
+  if (p.video) items.push({ type: "video", src: p.video, poster: p.poster ?? p.img });
+  (p.gallery ?? []).forEach((src) => items.push({ type: "image", src }));
+  return items;
+}
 
 export default function Projetos() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -65,15 +64,15 @@ export default function Projetos() {
 
   const closeLightbox = useCallback(() => setActiveProject(null), []);
 
-  const gallery = (activeProject !== null ? projetos[activeProject].gallery : []) ?? [];
+  const media = activeProject !== null ? getMedia(projetos[activeProject]) : [];
 
   const next = useCallback(() => {
-    setPhotoIndex((i) => (gallery.length ? (i + 1) % gallery.length : 0));
-  }, [gallery.length]);
+    setPhotoIndex((i) => (media.length ? (i + 1) % media.length : 0));
+  }, [media.length]);
 
   const prev = useCallback(() => {
-    setPhotoIndex((i) => (gallery.length ? (i - 1 + gallery.length) % gallery.length : 0));
-  }, [gallery.length]);
+    setPhotoIndex((i) => (media.length ? (i - 1 + media.length) % media.length : 0));
+  }, [media.length]);
 
   useEffect(() => {
     if (activeProject === null) return;
@@ -93,6 +92,9 @@ export default function Projetos() {
     };
   }, [activeProject, next, prev, closeLightbox]);
 
+  const rosewood = projetos.find((p) => p.video);
+  const current = media[photoIndex];
+
   return (
     <PageWrapper>
       <div className="pt-28 pb-14 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
@@ -104,26 +106,29 @@ export default function Projetos() {
               <span className="italic font-light" style={{ color: ACCENT }}>realizados</span>
             </h1>
             <p className="mt-8 max-w-2xl text-white/75 font-light leading-relaxed">
-              Espaços, experiências e soluções wellness desenvolvidas para marcas, empreendimentos e ambientes de alto padrão. Clique em um projeto para ver a galeria de imagens.
+              Espaços, experiências e soluções wellness desenvolvidas para marcas, empreendimentos e ambientes de alto padrão. Clique em um projeto para ver a galeria.
             </p>
           </FadeIn>
 
           <div className="mt-12 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {projetos.map((p, i) => {
-              const hasGallery = !!p.gallery && p.gallery.length > 0;
+              const items = getMedia(p);
+              const clickable = items.length > 0;
+              const photoCount = p.gallery?.length ?? 0;
               const cardInner = (
                 <>
                   <img
                     src={p.img}
                     alt={p.name}
                     loading="lazy"
-                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 grayscale-[20%] ${hasGallery ? "group-hover:scale-105" : ""}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 grayscale-[20%] ${clickable ? "group-hover:scale-105" : ""}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
-                  {hasGallery && (
+                  {clickable && (
                     <span className="absolute top-6 right-6 flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.2em] uppercase backdrop-blur-sm bg-black/30 border border-white/20 text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <Expand size={12} /> {p.gallery!.length} fotos
+                      {p.video ? <Play size={12} /> : <Expand size={12} />}
+                      {p.video ? `Vídeo + ${photoCount} fotos` : `${photoCount} fotos`}
                     </span>
                   )}
 
@@ -141,7 +146,7 @@ export default function Projetos() {
 
               return (
                 <FadeIn key={i} delay={(i % 2) * 0.1}>
-                  {hasGallery ? (
+                  {clickable ? (
                     <button
                       type="button"
                       onClick={(e) => openLightbox(i, e)}
@@ -159,10 +164,15 @@ export default function Projetos() {
               );
             })}
           </div>
+
+          {/* Seção dedicada: vídeo Rosewood */}
+          {rosewood?.video && (
+            <RosewoodVideoSection video={rosewood.video} poster={rosewood.poster ?? rosewood.img} />
+          )}
         </div>
       </div>
 
-      {activeProject !== null && (
+      {activeProject !== null && current && (
         <div
           className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex flex-col"
           role="dialog"
@@ -186,50 +196,68 @@ export default function Projetos() {
             </button>
           </div>
 
-          {/* Image stage */}
+          {/* Stage */}
           <div className="relative flex-1 flex items-center justify-center px-4 md:px-20 min-h-0" onClick={(e) => e.stopPropagation()}>
             <button
               type="button"
               onClick={prev}
               className="absolute left-2 md:left-6 z-10 p-3 text-white/70 hover:text-white border border-white/20 hover:border-white/50 transition-colors bg-black/30 backdrop-blur-sm"
-              aria-label="Imagem anterior"
+              aria-label="Anterior"
             >
               <ChevronLeft size={24} />
             </button>
 
-            <img
-              src={gallery[photoIndex]}
-              alt={`${projetos[activeProject].name} — imagem ${photoIndex + 1}`}
-              className="max-h-full max-w-full object-contain select-none"
-            />
+            {current.type === "video" ? (
+              <video
+                key={current.src}
+                src={current.src}
+                poster={current.poster}
+                controls
+                autoPlay
+                loop
+                playsInline
+                className="max-h-full max-w-full object-contain select-none"
+              />
+            ) : (
+              <img
+                src={current.src}
+                alt={`${projetos[activeProject].name} — imagem ${photoIndex + 1}`}
+                className="max-h-full max-w-full object-contain select-none"
+              />
+            )}
 
             <button
               type="button"
               onClick={next}
               className="absolute right-2 md:right-6 z-10 p-3 text-white/70 hover:text-white border border-white/20 hover:border-white/50 transition-colors bg-black/30 backdrop-blur-sm"
-              aria-label="Próxima imagem"
+              aria-label="Próxima"
             >
               <ChevronRight size={24} />
             </button>
           </div>
 
-          {/* Bottom: counter + thumbnails */}
+          {/* Counter + thumbnails */}
           <div className="shrink-0 px-6 md:px-12 py-6" onClick={(e) => e.stopPropagation()}>
             <p className="text-center text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>
-              {photoIndex + 1} / {gallery.length}
+              {photoIndex + 1} / {media.length}
             </p>
             <div className="flex justify-center gap-2 md:gap-3 overflow-x-auto">
-              {gallery.map((src, idx) => (
+              {media.map((item, idx) => (
                 <button
-                  key={src}
+                  key={item.src}
                   type="button"
                   onClick={() => setPhotoIndex(idx)}
                   className={`relative h-14 w-20 md:h-16 md:w-24 shrink-0 overflow-hidden transition-opacity ${
                     idx === photoIndex ? "opacity-100 ring-1 ring-white" : "opacity-40 hover:opacity-80"
                   }`}
-                  aria-label={`Ir para imagem ${idx + 1}`}
+                  aria-label={`Ir para item ${idx + 1}`}
                 >
-                  <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
+                  <img src={item.type === "video" ? item.poster : item.src} alt="" loading="lazy" className="h-full w-full object-cover" />
+                  {item.type === "video" && (
+                    <span className="absolute inset-0 flex items-center justify-center bg-black/30 text-white">
+                      <Play size={16} />
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
@@ -237,5 +265,57 @@ export default function Projetos() {
         </div>
       )}
     </PageWrapper>
+  );
+}
+
+function RosewoodVideoSection({ video, poster }: { video: string; poster: string }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleSound = () => {
+    const el = videoRef.current;
+    setMuted((prev) => {
+      const nextMuted = !prev;
+      if (el && !nextMuted) el.play().catch(() => {});
+      return nextMuted;
+    });
+  };
+
+  return (
+    <div className="mt-20 md:mt-32 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+      <FadeIn className="md:col-span-5">
+        <div className="relative mx-auto max-w-[320px] md:max-w-[360px] aspect-[9/16] overflow-hidden border" style={{ borderColor: "rgba(160,160,160,0.3)" }}>
+          <video
+            ref={videoRef}
+            src={video}
+            poster={poster}
+            autoPlay
+            loop
+            muted={muted}
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          <button
+            type="button"
+            onClick={toggleSound}
+            className="absolute bottom-4 right-4 p-3 text-white/90 hover:text-white border border-white/25 hover:border-white/60 bg-black/40 backdrop-blur-sm transition-colors"
+            aria-label={muted ? "Ativar som" : "Desativar som"}
+          >
+            {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+          </button>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.15} className="md:col-span-7">
+        <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— A experiência Rosewood</p>
+        <h2 className="font-serif text-white text-4xl md:text-5xl leading-tight mb-6">
+          Wellness dentro de um<br />
+          <span className="italic font-light" style={{ color: ACCENT }}>ícone da hospitalidade de luxo.</span>
+        </h2>
+        <p className="text-white/75 font-light leading-relaxed max-w-xl">
+          Um registro da atuação de Michel Bueno no Rosewood — onde performance, estética e experiência se encontram para criar ambientes wellness à altura de um dos endereços mais exclusivos do mundo.
+        </p>
+      </FadeIn>
+    </div>
   );
 }
