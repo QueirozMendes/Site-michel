@@ -4,10 +4,12 @@ import { FadeIn } from "@/components/ui/fade-in";
 const ACCENT = "#A0A0A0";
 
 const partners = [
-  { name: "Technogym", note: "Equipamentos premium" },
-  { name: "Tryex", note: "Soluções fitness" },
-  { name: "Mitre", note: "Lifestyle & performance" },
-  { name: "Mentore Bank", note: "Parceria institucional" },
+  { name: "Technogym", src: "/partner-technogym.png", note: "Equipamentos premium" },
+  { name: "Tryex", src: "/partner-tryex.png", note: "Soluções fitness" },
+  { name: "Six Wellness Club", src: "/partner-six.png", note: "Clube wellness" },
+  { name: "Mitre", src: "/partner-mitre.png", note: "Lifestyle & performance" },
+  { name: "Mentore Bank", src: "/partner-mentore.png", note: "Parceria institucional" },
+  { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
 ];
 
 export default function Parcerias() {
@@ -34,7 +36,12 @@ export default function Parcerias() {
                   key={i}
                   className="p-12 md:p-16 border-b border-white/10 sm:[&:nth-last-child(-n+2)]:border-b-0 sm:[&:nth-child(odd)]:border-r flex flex-col items-center justify-center text-center hover:bg-white/[0.02] transition-colors min-h-[200px]"
                 >
-                  <span className="font-serif text-3xl md:text-4xl text-white/70 tracking-wide mb-3">{p.name}</span>
+                  <img
+                    src={p.src}
+                    alt={p.name}
+                    loading="lazy"
+                    className="max-h-14 md:max-h-16 max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5"
+                  />
                   <span className="text-xs tracking-[0.2em] uppercase text-white/45">{p.note}</span>
                 </div>
               ))}
