@@ -3,14 +3,6 @@ import { FadeIn } from "@/components/ui/fade-in";
 
 const ACCENT = "#A0A0A0";
 
-const blocos = [
-  { title: "Artigos publicados", desc: "Conteúdos autorais sobre wellness, longevidade e performance." },
-  { title: "Entrevistas", desc: "Conversas sobre comportamento, saúde e alta performance." },
-  { title: "Colunas", desc: "Visão editorial recorrente sobre lifestyle e bem-estar." },
-  { title: "Aparições em eventos", desc: "Participações e palestras em encontros do setor." },
-  { title: "Press kit", desc: "Materiais institucionais para imprensa e parceiros." },
-];
-
 export default function Midia() {
   return (
     <PageWrapper>
@@ -24,39 +16,30 @@ export default function Midia() {
             </h1>
           </FadeIn>
 
-          {/* Destaque Jetsetter */}
+          {/* Destaque Jetsetters News */}
           <FadeIn delay={0.2}>
             <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border border-white/10 p-10 md:p-16">
               <div className="order-2 md:order-1">
                 <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>Destaque</p>
-                <h2 className="font-serif text-white text-4xl md:text-5xl mb-6">Jetsetter News</h2>
+                <h2 className="font-serif text-white text-4xl md:text-5xl mb-3">Jetsetters News</h2>
+                <p className="text-base tracking-[0.15em] uppercase font-light mb-6" style={{ color: ACCENT }}>Jornalismo de luxo</p>
                 <p className="text-white/75 font-light leading-relaxed">
-                  Michel Bueno participa da Jetsetter News com conteúdos sobre wellness, treinamento, longevidade, comportamento e alta performance, levando sua visão para uma audiência conectada a saúde, lifestyle e transformação.
+                  Michel Bueno participa da Jetsetters News com conteúdos sobre wellness, treinamento, longevidade, comportamento e alta performance, levando sua visão para uma audiência conectada a saúde, lifestyle e transformação.
                 </p>
+                <a
+                  href="https://instagram.com/michel__bueno"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-8 text-sm tracking-[0.2em] uppercase text-white/80 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1"
+                >
+                  @michel__bueno
+                </a>
               </div>
               <div className="order-1 md:order-2 aspect-[3/4] overflow-hidden">
                 <img src="/michel-jetsetter.jpg" alt="Michel Bueno" className="w-full h-full object-cover object-top grayscale-[15%]" />
               </div>
             </div>
           </FadeIn>
-
-          {/* Blocos de conteúdo */}
-          <div className="mt-12 md:mt-24">
-            <FadeIn>
-              <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Conteúdo</p>
-            </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px border border-white/10 bg-white/10">
-              {blocos.map((b, i) => (
-                <FadeIn key={i} delay={i * 0.06}>
-                  <div className="bg-[#0f0e0c] p-10 h-full hover:bg-[#161410] transition-colors duration-300">
-                    <div className="w-8 h-px mb-8" style={{ background: ACCENT }} />
-                    <h3 className="font-serif text-white text-2xl mb-3">{b.title}</h3>
-                    <p className="text-white/70 text-sm leading-relaxed">{b.desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </PageWrapper>
