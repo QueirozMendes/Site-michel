@@ -36,7 +36,7 @@ const projetos: Projeto[] = [
     img: "/rosewood-cover.webp",
     video: "/rosewood-video.mp4",
     poster: "/rosewood-video-poster.jpg",
-    gallery: Array.from({ length: 20 }, (_, i) => `/gallery-rosewood-${i + 1}.jpg`),
+    gallery: Array.from({ length: 5 }, (_, i) => `/rosewood-${i + 1}.png`),
   },
 ];
 
