@@ -41,6 +41,7 @@ const partners = [
   { name: "Mitre", src: "/partner-mitre.png" },
   { name: "Mentore Bank", src: "/partner-mentore.png" },
   { name: "Daslu", src: "/partner-daslu.png" },
+  { name: "Instituto Aguilera", src: "/partner-aguilera.png" },
 ];
 
 export default function Home() {
@@ -257,11 +258,11 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Parceiros e marcas conectadas ao ecossistema Michel Bueno</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border border-white/10 mb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 border-t border-l border-white/10 mb-12">
               {partners.map((p) => (
                 <div
                   key={p.name}
-                  className="flex items-center justify-center h-28 md:h-32 px-6 bg-[#0f0e0c] hover:bg-white/[0.04] transition-colors duration-500"
+                  className="flex items-center justify-center h-28 md:h-32 px-6 bg-[#0f0e0c] border-r border-b border-white/10 hover:bg-white/[0.04] transition-colors duration-500"
                 >
                   <img
                     src={p.src}

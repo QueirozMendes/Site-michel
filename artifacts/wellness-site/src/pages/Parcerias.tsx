@@ -10,6 +10,7 @@ const partners = [
   { name: "Mitre", src: "/partner-mitre.png", note: "Lifestyle & performance" },
   { name: "Mentore Bank", src: "/partner-mentore.png", note: "Parceria institucional" },
   { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
+  { name: "Instituto Aguilera", src: "/partner-aguilera.png", note: "Saúde & estética" },
 ];
 
 export default function Parcerias() {
@@ -30,21 +31,24 @@ export default function Parcerias() {
 
           {/* Logos / wordmarks */}
           <FadeIn delay={0.2}>
-            <div className="mt-12 md:mt-24 grid grid-cols-1 sm:grid-cols-2 border border-white/10">
-              {partners.map((p, i) => (
-                <div
-                  key={i}
-                  className="p-12 md:p-16 border-b border-white/10 sm:[&:nth-last-child(-n+2)]:border-b-0 sm:[&:nth-child(odd)]:border-r flex flex-col items-center justify-center text-center hover:bg-white/[0.02] transition-colors min-h-[200px]"
-                >
-                  <img
-                    src={p.src}
-                    alt={p.name}
-                    loading="lazy"
-                    className="max-h-14 md:max-h-16 max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5"
-                  />
-                  <span className="text-xs tracking-[0.2em] uppercase text-white/45">{p.note}</span>
-                </div>
-              ))}
+            <div className="mt-12 md:mt-24 grid grid-cols-1 sm:grid-cols-2 gap-px border border-white/10 bg-white/10">
+              {partners.map((p, i) => {
+                const isLastOdd = partners.length % 2 === 1 && i === partners.length - 1;
+                return (
+                  <div
+                    key={i}
+                    className={`bg-[#0f0e0c] p-12 md:p-16 flex flex-col items-center justify-center text-center hover:bg-white/[0.02] transition-colors min-h-[200px]${isLastOdd ? " sm:col-span-2" : ""}`}
+                  >
+                    <img
+                      src={p.src}
+                      alt={p.name}
+                      loading="lazy"
+                      className="max-h-14 md:max-h-16 max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5"
+                    />
+                    <span className="text-xs tracking-[0.2em] uppercase text-white/45">{p.note}</span>
+                  </div>
+                );
+              })}
             </div>
           </FadeIn>
 
