@@ -298,7 +298,7 @@ export default function Home() {
                   Entrar em contato
                 </span>
               </Link>
-              <a href="https://instagram.com/michel_bueno" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/michel__bueno" target="_blank" rel="noopener noreferrer">
                 <span className="inline-flex items-center justify-center border border-white/40 text-white text-xs tracking-[0.2em] uppercase px-10 py-4 hover:bg-white/10 transition-all cursor-pointer">
                   Instagram
                 </span>
