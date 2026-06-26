@@ -11,6 +11,7 @@ const partners = [
   { name: "Mentore Bank", src: "/partner-mentore.png", note: "Parceria institucional" },
   { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
   { name: "Instituto Aguilera", src: "/partner-aguilera.png", note: "Saúde & estética" },
+  { name: "Rosewood Hotels & Resorts", src: "/partner-rosewood.png", note: "Hotelaria de luxo" },
 ];
 
 export default function Parcerias() {

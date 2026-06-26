@@ -42,6 +42,7 @@ const partners = [
   { name: "Mentore Bank", src: "/partner-mentore.png" },
   { name: "Daslu", src: "/partner-daslu.png" },
   { name: "Instituto Aguilera", src: "/partner-aguilera.png" },
+  { name: "Rosewood Hotels & Resorts", src: "/partner-rosewood.png" },
 ];
 
 export default function Home() {
@@ -258,7 +259,7 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <FadeIn>
             <p className="text-xs tracking-[0.4em] uppercase mb-12 font-light" style={{ color: ACCENT }}>— Parceiros e marcas conectadas ao ecossistema Michel Bueno</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 border-t border-l border-white/10 mb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-4 border-t border-l border-white/10 mb-12">
               {partners.map((p) => (
                 <div
                   key={p.name}
