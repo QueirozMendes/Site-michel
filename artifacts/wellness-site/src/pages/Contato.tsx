@@ -93,7 +93,7 @@ export default function Contato() {
           <FadeIn delay={0.2}>
             <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-white/10 bg-white/10">
               {[
-                { label: "Instagram", value: "@michel_bueno", href: "https://instagram.com/michel_bueno", external: true },
+                { label: "Instagram", value: "@michel__bueno", href: "https://www.instagram.com/michel__bueno", external: true },
                 { label: "LinkedIn", value: "Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a", external: true },
                 { label: "Local", value: "São Paulo — SP — Brasil" },
               ].map((info) => (

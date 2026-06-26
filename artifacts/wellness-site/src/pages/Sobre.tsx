@@ -68,7 +68,7 @@ export default function Sobre() {
                       { label: "CRECI SP", value: "264629" },
                       { label: "Mercado", value: "Wellness & Longevidade" },
                       { label: "Atuação", value: "São Paulo, SP — Brasil" },
-                      { label: "Instagram", value: "@michel_bueno" },
+                      { label: "Instagram", value: "@michel__bueno", href: "https://www.instagram.com/michel__bueno" },
                       { label: "LinkedIn", value: "Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a" },
                     ].map((cred: { label: string; value: string; href?: string }) => (
                       <li key={cred.label} className="flex justify-between items-center border-b border-white/10 pb-4 last:border-0">
