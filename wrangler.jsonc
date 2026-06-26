@@ -1,0 +1,24 @@
+{
+  // Cloudflare Pages configuration for the Michel Bueno wellness site.
+  //
+  // Deploy flow: connect this GitHub repository to Cloudflare Pages
+  // (Workers & Pages > Create > Pages > Connect to Git).
+  //
+  // This is a pnpm monorepo, so the build must run from the repository
+  // root (where the workspace and lockfile live), and the static output
+  // of the `wellness-site` artifact is served from the path below.
+  //
+  // Recommended Cloudflare Pages build settings (set in the dashboard):
+  //   - Root directory:        / (repository root, the default)
+  //   - Build command:         pnpm install --frozen-lockfile && pnpm --filter @workspace/wellness-site build
+  //   - Build output directory: artifacts/wellness-site/dist/public
+  //
+  // Required environment variables (Settings > Environment variables):
+  //   - BASE_PATH = /      (the site is served at the domain root)
+  //   - PORT      = 8080   (any value; required only so the Vite config loads)
+  //
+  // Client-side routing (Wouter) is handled by artifacts/wellness-site/public/_redirects.
+  "name": "michel-bueno-wellness",
+  "compatibility_date": "2026-06-26",
+  "pages_build_output_dir": "artifacts/wellness-site/dist/public"
+}
