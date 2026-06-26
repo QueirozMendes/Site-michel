@@ -69,10 +69,15 @@ export default function Sobre() {
                       { label: "Mercado", value: "Wellness & Longevidade" },
                       { label: "Atuação", value: "São Paulo, SP — Brasil" },
                       { label: "Instagram", value: "@michel_bueno" },
-                    ].map((cred) => (
+                      { label: "LinkedIn", value: "Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a" },
+                    ].map((cred: { label: string; value: string; href?: string }) => (
                       <li key={cred.label} className="flex justify-between items-center border-b border-white/10 pb-4 last:border-0">
                         <span className="text-xs tracking-[0.2em] uppercase text-white/55">{cred.label}</span>
-                        <span className="text-sm text-white/85">{cred.value}</span>
+                        {cred.href ? (
+                          <a href={cred.href} target="_blank" rel="noopener noreferrer" className="text-sm text-white/85 hover:text-white transition-colors">{cred.value}</a>
+                        ) : (
+                          <span className="text-sm text-white/85">{cred.value}</span>
+                        )}
                       </li>
                     ))}
                   </ul>
