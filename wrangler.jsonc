@@ -10,7 +10,7 @@
   //
   // Recommended Cloudflare Pages build settings (set in the dashboard):
   //   - Root directory:        / (repository root, the default)
-  //   - Build command:         pnpm install --frozen-lockfile && pnpm --filter @workspace/wellness-site build
+  //   - Build command:         pnpm install --no-frozen-lockfile && pnpm --filter @workspace/wellness-site build
   //   - Build output directory: artifacts/wellness-site/dist/public
   //
   // Required environment variables (Settings > Environment variables):
