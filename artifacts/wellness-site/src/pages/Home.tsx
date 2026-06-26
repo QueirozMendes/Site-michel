@@ -268,7 +268,7 @@ export default function Home() {
                     src={p.src}
                     alt={p.name}
                     loading="lazy"
-                    className="max-h-12 md:max-h-14 max-w-[78%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"
+                    className={`${p.src.includes("partner-six") || p.src.includes("partner-aguilera") ? "max-h-20 md:max-h-24" : "max-h-12 md:max-h-14"} max-w-[78%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500`}
                   />
                 </div>
               ))}

@@ -43,7 +43,7 @@ export default function Parcerias() {
                       src={p.src}
                       alt={p.name}
                       loading="lazy"
-                      className="max-h-14 md:max-h-16 max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5"
+                      className={`${p.src.includes("partner-six") || p.src.includes("partner-aguilera") ? "max-h-24 md:max-h-28" : "max-h-14 md:max-h-16"} max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5`}
                     />
                     <span className="text-xs tracking-[0.2em] uppercase text-white/45">{p.note}</span>
                   </div>
