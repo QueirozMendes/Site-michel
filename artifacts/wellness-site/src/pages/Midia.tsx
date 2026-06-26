@@ -46,14 +46,24 @@ export default function Midia() {
             <div className="mt-12 border border-white/10 p-10 md:p-16 text-center">
               <p className="text-xs tracking-[0.3em] uppercase mb-4 font-light" style={{ color: ACCENT }}>Instagram</p>
               <h2 className="font-serif text-white text-3xl md:text-4xl mb-6">Acompanhe no Instagram</h2>
-              <a
-                href="https://www.instagram.com/mb_wellnessdesing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-white/80 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1"
-              >
-                @mb_wellnessdesing
-              </a>
+              <div className="flex flex-col items-center gap-4">
+                <a
+                  href="https://www.instagram.com/mb_wellnessdesing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-white/80 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1"
+                >
+                  @mb_wellnessdesing
+                </a>
+                <a
+                  href="https://www.instagram.com/michel__bueno"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-white/80 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1"
+                >
+                  @michel__bueno
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>
