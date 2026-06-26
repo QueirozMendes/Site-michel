@@ -91,11 +91,10 @@ export default function Contato() {
 
           {/* Informações adicionais */}
           <FadeIn delay={0.2}>
-            <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px border border-white/10 bg-white/10">
+            <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-white/10 bg-white/10">
               {[
                 { label: "Instagram", value: "@michel_bueno", href: "https://instagram.com/michel_bueno", external: true },
                 { label: "LinkedIn", value: "Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a", external: true },
-                { label: "Mídia", value: "Jetsetter News", href: "/midia", external: false },
                 { label: "Local", value: "São Paulo — SP — Brasil" },
               ].map((info) => (
                 <div key={info.label} className="bg-[#0f0e0c] p-8 text-center">
