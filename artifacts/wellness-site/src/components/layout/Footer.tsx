@@ -1,6 +1,13 @@
 import { Link } from "wouter";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const ACCENT = "#A0A0A0";
+
+const socials = [
+  { label: "Instagram · @mb_wellnessdesing", href: "https://www.instagram.com/mb_wellnessdesing", Icon: FaInstagram },
+  { label: "Instagram · @michel__bueno", href: "https://www.instagram.com/michel__bueno", Icon: FaInstagram },
+  { label: "LinkedIn · Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a", Icon: FaLinkedinIn },
+];
 
 export function Footer() {
   return (
@@ -9,6 +16,21 @@ export function Footer() {
         <div>
           <img src="/logo-mb.png" alt="Michel Bueno" className="h-10 w-auto" />
           <p className="mt-3 text-xs tracking-[0.1em] text-white/40 uppercase">Michel Bueno · Wellness · Design · Longevidade · Performance</p>
+          <div className="mt-5 flex items-center gap-4">
+            {socials.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className="text-white/50 hover:text-white transition-colors"
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-3 text-xs tracking-[0.15em] uppercase">
