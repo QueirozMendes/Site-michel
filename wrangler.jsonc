@@ -1,0 +1,26 @@
+{
+  // Cloudflare Workers (Static Assets) configuration for the Michel Bueno
+  // wellness site. This is a static Vite SPA — there is no Worker script,
+  // only the built assets are uploaded and served.
+  //
+  // This config lives at the repository root so the default Cloudflare
+  // deploy command (`npx wrangler deploy`, run from the repo root) finds a
+  // valid, explicit deploy target and does NOT fall back to workspace/app
+  // auto-detection (which fails in a pnpm monorepo).
+  //
+  // `name` must match the connected Cloudflare Worker project (michel-site).
+  //
+  // Cloudflare project settings (Workers Builds, connected to GitHub):
+  //   - Root directory:  / (repository root)
+  //   - Build command:   pnpm --filter @workspace/wellness-site build
+  //   - Deploy command:  npx wrangler deploy
+  //
+  // No environment variables are required: the production build serves from
+  // the domain root and client-side routing is handled by not_found_handling.
+  "name": "michel-site",
+  "compatibility_date": "2026-06-26",
+  "assets": {
+    "directory": "artifacts/wellness-site/dist/public",
+    "not_found_handling": "single-page-application"
+  }
+}
