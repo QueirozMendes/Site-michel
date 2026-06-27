@@ -12,6 +12,8 @@ const partners = [
   { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
   { name: "Instituto Aguilera", src: "/partner-aguilera.png", note: "Saúde & estética" },
   { name: "Rosewood Hotels & Resorts", src: "/partner-rosewood.png", note: "Hotelaria de luxo" },
+  { name: "Latam Wellness", src: "/partner-latam.png", note: "Longevity concept" },
+  { name: "Starpool", src: "/partner-starpool.png", note: "Wellness & spa" },
 ];
 
 export default function Parcerias() {
@@ -44,7 +46,7 @@ export default function Parcerias() {
                       src={p.src}
                       alt={p.name}
                       loading="lazy"
-                      className={`${p.src.includes("partner-six") || p.src.includes("partner-aguilera") ? "max-h-24 md:max-h-28" : "max-h-14 md:max-h-16"} max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5`}
+                      className={`${p.src.includes("partner-six") || p.src.includes("partner-aguilera") || p.src.includes("partner-latam") ? "max-h-24 md:max-h-28" : "max-h-14 md:max-h-16"} max-w-[60%] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 mb-5`}
                     />
                     <span className="text-xs tracking-[0.2em] uppercase text-white/45">{p.note}</span>
                   </div>
