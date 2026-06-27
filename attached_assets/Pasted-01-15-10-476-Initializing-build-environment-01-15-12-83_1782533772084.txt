@@ -1,0 +1,76 @@
+01:15:10.476
+Initializing build environment...
+01:15:12.835
+Success: Finished initializing build environment
+01:15:13.502
+Cloning repository...
+01:15:28.503
+Restoring from dependencies cache
+01:15:28.504
+Restoring from build output cache
+01:15:30.340
+Detected the following tools from environment: pnpm@10.26.1, nodejs@22.16.0
+01:15:31.600
+Installing project dependencies: pnpm install --frozen-lockfile
+01:15:32.225
+Scope: all 9 workspace projects
+01:15:32.355
+Lockfile is up to date, resolution step is skipped
+01:15:32.401
+Progress: resolved 1, reused 0, downloaded 0, added 0
+01:15:32.482
+Packages: +485
+01:15:32.482
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+01:15:33.402
+Progress: resolved 485, reused 0, downloaded 16, added 0
+01:15:34.401
+Progress: resolved 485, reused 0, downloaded 155, added 58
+01:15:35.401
+Progress: resolved 485, reused 0, downloaded 282, added 125
+01:15:36.422
+Progress: resolved 485, reused 0, downloaded 301, added 133
+01:15:37.422
+Progress: resolved 485, reused 0, downloaded 310, added 133
+01:15:38.422
+Progress: resolved 485, reused 0, downloaded 350, added 149
+01:15:39.424
+Progress: resolved 485, reused 0, downloaded 388, added 162
+01:15:41.382
+Progress: resolved 485, reused 0, downloaded 408, added 170
+01:15:42.934
+Progress: resolved 485, reused 0, downloaded 451, added 191
+01:15:43.890
+Progress: resolved 485, reused 0, downloaded 485, added 311
+01:15:44.127
+Progress: resolved 485, reused 0, downloaded 485, added 485, done
+01:15:44.420
+.../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+01:15:44.486
+.../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+01:15:44.910
+01:15:44.910
+devDependencies:
+01:15:44.910
++ prettier 3.8.3
+01:15:44.910
++ typescript 5.9.3
+01:15:44.910
+01:15:44.968
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+01:15:44.980
+. preinstall: Done
+01:15:45.101
+Done in 13.3s using pnpm v10.26.1
+01:15:45.267
+Executing user build command: pnpm --filter @workspace/wellness-site build
+01:15:45.702
+01:15:45.703
+> @workspace/wellness-site@0.0.0 build /opt/buildhome/repo/artifacts/wellness-site
+01:15:45.703
+> vite build --config vite.config.ts
+01:15:45.703
+01:15:46.224
+failed to load config from /opt/buildhome/repo/artifacts/wellness-site/vite.config.ts
+01:15:46.227
+error during build:
