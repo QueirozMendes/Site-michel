@@ -57,7 +57,7 @@ export default function Home() {
           <img
             src="/hero-michel.jpg"
             alt="Michel Bueno"
-            className="w-full h-full object-cover object-top scale-[1.03] transition-transform duration-[25s] hover:scale-100"
+            className="w-full h-full object-cover object-top origin-top scale-[1.03] transition-transform duration-[25s] hover:scale-100"
           />
         </div>
 
