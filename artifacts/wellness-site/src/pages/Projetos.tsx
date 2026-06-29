@@ -30,11 +30,11 @@ const projetos: Projeto[] = [
     gallery: Array.from({ length: 7 }, (_, i) => `/rosewood-${i + 1}.png`),
   },
   {
-    name: "Six Wollness Club — Itaim",
+    name: "Six Wowness Club — Itaim",
     location: "Itaim · São Paulo",
     category: "Espaço wellness / Fitness premium",
     role: "Experiência do usuário e jornada do cliente",
-    desc: "No Six Wollness Club, unidade Itaim, Michel desenvolveu toda a experiência do usuário e a jornada do cliente — da chegada ao acolhimento, do primeiro treino à construção de um vínculo contínuo com o espaço. Cada detalhe foi pensado para transformar o ato de treinar em uma experiência fluida, intuitiva e memorável, elevando o padrão de atendimento ao nível dos clubes wellness mais exclusivos do país.",
+    desc: "No Six Wowness Club, unidade Itaim, Michel desenvolveu toda a experiência do usuário e a jornada do cliente — da chegada ao acolhimento, do primeiro treino à construção de um vínculo contínuo com o espaço. Cada detalhe foi pensado para transformar o ato de treinar em uma experiência fluida, intuitiva e memorável, elevando o padrão de atendimento ao nível dos clubes wellness mais exclusivos do país.",
     img: "/six-cover.png",
     gallery: Array.from({ length: 3 }, (_, i) => `/gallery-six-${i + 1}.jpg`),
   },

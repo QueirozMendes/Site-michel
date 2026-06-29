@@ -31,13 +31,13 @@ const atuacao = [
 
 const projetos = [
   { img: "/rosewood-cover.webp", name: "Rosewood São Paulo", desc: "Layout do fitness center, seleção de aparelhos e metodologia de treinamento em um ícone da hotelaria de luxo." },
-  { img: "/six-cover.png", name: "Six Wollness Club — Itaim", desc: "Experiência do usuário e jornada do cliente em um clube wellness premium no coração do Itaim." },
+  { img: "/six-cover.png", name: "Six Wowness Club — Itaim", desc: "Experiência do usuário e jornada do cliente em um clube wellness premium no coração do Itaim." },
 ];
 
 const partners = [
   { name: "Technogym", src: "/partner-technogym.png" },
   { name: "Tryex", src: "/partner-tryex.png" },
-  { name: "Six Wollness Club", src: "/partner-six.png" },
+  { name: "Six Wowness Club", src: "/partner-six.png" },
   { name: "Mitre", src: "/partner-mitre.png" },
   { name: "Mentore Bank", src: "/partner-mentore.png" },
   { name: "Daslu", src: "/partner-daslu.png" },

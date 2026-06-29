@@ -6,7 +6,7 @@ const ACCENT = "#A0A0A0";
 const partners = [
   { name: "Technogym", src: "/partner-technogym.png", note: "Equipamentos premium" },
   { name: "Tryex", src: "/partner-tryex.png", note: "Soluções fitness" },
-  { name: "Six Wollness Club", src: "/partner-six.png", note: "Clube wellness" },
+  { name: "Six Wowness Club", src: "/partner-six.png", note: "Clube wellness" },
   { name: "Mitre", src: "/partner-mitre.png", note: "Lifestyle & performance" },
   { name: "Mentore Bank", src: "/partner-mentore.png", note: "Parceria institucional" },
   { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
