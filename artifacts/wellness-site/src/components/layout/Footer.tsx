@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const ACCENT = "#A0A0A0";
@@ -31,16 +30,6 @@ export function Footer() {
               </a>
             ))}
           </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-3 text-xs tracking-[0.15em] uppercase">
-          <Link href="/"><span className="hover:text-white transition-colors cursor-pointer">Home</span></Link>
-          <Link href="/sobre"><span className="hover:text-white transition-colors cursor-pointer">Sobre</span></Link>
-          <Link href="/projetos"><span className="hover:text-white transition-colors cursor-pointer">Projetos</span></Link>
-          <Link href="/wellness-spaces"><span className="hover:text-white transition-colors cursor-pointer">Wellness Spaces</span></Link>
-          <Link href="/parcerias"><span className="hover:text-white transition-colors cursor-pointer">Parcerias</span></Link>
-          <Link href="/midia"><span className="hover:text-white transition-colors cursor-pointer">Mídia</span></Link>
-          <Link href="/contato"><span className="hover:text-white transition-colors cursor-pointer">Contato</span></Link>
         </div>
 
         <div className="text-left md:text-right text-xs text-white/40 tracking-widest uppercase">
