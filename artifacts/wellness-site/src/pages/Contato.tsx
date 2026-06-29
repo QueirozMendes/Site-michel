@@ -101,12 +101,16 @@ export default function Contato() {
                   <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>{info.label}</p>
                   {info.href ? (
                     info.external ? (
-                      <a href={info.href} target="_blank" rel="noopener noreferrer" className="text-white/85 text-sm hover:text-white transition-colors">
-                        {info.value}
+                      <a href={info.href} target="_blank" rel="noopener noreferrer">
+                        <span className="inline-flex items-center justify-center border border-white/40 text-white text-xs tracking-[0.2em] uppercase px-8 py-3 hover:bg-white/10 transition-all cursor-pointer">
+                          {info.value}
+                        </span>
                       </a>
                     ) : (
                       <Link href={info.href}>
-                        <span className="text-white/85 text-sm hover:text-white transition-colors cursor-pointer">{info.value}</span>
+                        <span className="inline-flex items-center justify-center border border-white/40 text-white text-xs tracking-[0.2em] uppercase px-8 py-3 hover:bg-white/10 transition-all cursor-pointer">
+                          {info.value}
+                        </span>
                       </Link>
                     )
                   ) : (
