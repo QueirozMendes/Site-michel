@@ -6,6 +6,7 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export * from './contactRequest';
-export * from './contactResponse';
-export * from './healthStatus';
+export interface ContactResponse {
+  success: boolean;
+  message?: string;
+}

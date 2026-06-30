@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [contact]
+      summary: Submit contact form
+      description: Validates the contact form and sends it as an email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactRequest"
+      responses:
+        "200":
+          description: Message sent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
+        "500":
+          description: Failed to send
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,43 @@ components:
           type: string
       required:
         - status
+    ContactRequest:
+      type: object
+      properties:
+        nome:
+          type: string
+          minLength: 2
+          maxLength: 120
+        email:
+          type: string
+          format: email
+          maxLength: 200
+        telefone:
+          type: string
+          maxLength: 40
+        empresa:
+          type: string
+          maxLength: 160
+        interesse:
+          type: string
+          minLength: 1
+          maxLength: 120
+        mensagem:
+          type: string
+          minLength: 5
+          maxLength: 4000
+      required:
+        - nome
+        - email
+        - interesse
+        - mensagem
+    ContactResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+      required:
+        - success
 

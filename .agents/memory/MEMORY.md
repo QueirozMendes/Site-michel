@@ -1,2 +1,3 @@
 - [Fixed overlay containing block](fixed-overlay-containing-block.md) — full-screen fixed overlays must be portaled to body, not nested in a backdrop-blur/transform header, or they break when scrolled.
 - [Home min-h-screen hero hides lower sections from screenshots](wellness-home-screenshot.md) — top-anchored app_preview can't reach below-fold Home sections; verify via curl/other pages instead.
+- [SendGrid connection invalid key](sendgrid-connection-key.md) — a bound SendGrid connection can still serve a garbage api_key (not `SG.`); validate shape, don't keep retrying.

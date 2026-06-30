@@ -37,7 +37,7 @@ Single-language (pt-BR) marketing site, 7 pages routed with Wouter:
 - `/wellness-spaces` Wellness Spaces — projetista de espaços (6 service blocks + para quem é)
 - `/parcerias` Parcerias — Technogym, Tryex, Mitre, Mentore Bank (typographic wordmarks)
 - `/midia` Mídia — Jetsetter News highlight + content grid
-- `/contato` Contato — client-side form (Nome, E-mail, Telefone, Empresa, Tipo de interesse, Mensagem), success state, no backend
+- `/contato` Contato — form (Nome, E-mail, Telefone, Empresa, Tipo de interesse, Mensagem) with client-side validation + SweetAlert2 feedback; POSTs to `/api/contact` which emails contato@michelbuenogroup.com.br via SendGrid (replyTo = visitor)
 
 Design language: dark near-black bg `#0f0e0c`, large serif display, neutral gray accent `#A0A0A0`, FadeIn scroll animations.
 
@@ -48,7 +48,8 @@ Design language: dark near-black bg `#0f0e0c`, large serif display, neutral gray
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- **Contact form needs the backend.** `/contato` POSTs to `/api/contact` (api-server). On the Replit autoscale deploy this is routed by the proxy and works. **The Cloudflare static deploy has NO backend, so the form will fail there** — only deploy the contact feature where `/api/contact` is served.
+- **SendGrid sending depends on a valid connected account.** The send uses the Replit SendGrid connection's `api_key` + verified `from_email`. If the connected account's key is invalid/expired, sending fails with a graceful 500 (`success:false`) and the real cause is in the api-server logs. The connection currently holds an invalid key — sending is blocked until a valid SendGrid account is connected.
 
 ## Pointers
 
