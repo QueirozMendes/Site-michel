@@ -43,8 +43,8 @@ export default function WellnessSpaces() {
 
           {/* Texto principal */}
           <FadeIn delay={0.2}>
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-12">
-              <div className="md:col-span-7 space-y-6 text-white/80 font-light text-lg leading-relaxed">
+            <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
+              <div className="md:col-span-7 flex flex-col justify-center space-y-6 text-white/80 font-light text-lg leading-relaxed">
                 <p>
                   O wellness deixou de ser apenas uma amenidade. Hoje, espaços fitness, áreas de recovery, studios de movimento e ambientes dedicados à longevidade influenciam diretamente a percepção de valor, o desejo de compra e a experiência do usuário dentro de um empreendimento.
                 </p>
@@ -56,8 +56,8 @@ export default function WellnessSpaces() {
                 </p>
               </div>
               <div className="md:col-span-5">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img src="/service-2.png" alt="Espaço wellness" className="w-full h-full object-cover grayscale-[15%]" />
+                <div className="h-full min-h-[320px] overflow-hidden">
+                  <img src="/service-2.jpg" alt="Espaço wellness" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
               </div>
             </div>
