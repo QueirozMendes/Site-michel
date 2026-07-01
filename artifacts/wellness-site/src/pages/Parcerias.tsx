@@ -8,7 +8,7 @@ const partners = [
   { name: "Tryex", src: "/partner-tryex.png", note: "Soluções fitness" },
   { name: "Six Wowness Club", src: "/partner-six.png", note: "Clube wellness" },
   { name: "Mitre", src: "/partner-mitre.png", note: "Incorporadora e construtora" },
-  { name: "Mentore Bank", src: "/partner-mentore.png", note: "Parceria institucional" },
+  { name: "Mentore Bank", src: "/partner-mentore.png", note: "Sonhe e realize" },
   { name: "Daslu", src: "/partner-daslu.png", note: "Lifestyle & moda" },
   { name: "Instituto Aguilera", src: "/partner-aguilera.png", note: "Saúde & estética" },
   { name: "Rosewood Hotels & Resorts", src: "/partner-rosewood.png", note: "Hotelaria de luxo" },
