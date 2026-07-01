@@ -31,32 +31,30 @@ export default function WellnessSpaces() {
       <div className="pt-28 pb-14 md:pt-40 md:pb-32 px-6 md:px-12 bg-[#0f0e0c] min-h-screen">
         <div className="container mx-auto">
           <FadeIn>
-            <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Wellness Spaces</p>
-            <h1 className="text-4xl md:text-6xl font-serif text-white leading-tight max-w-4xl">
-              Projetista de espaços wellness<br />
-              <span className="italic font-light" style={{ color: ACCENT }}>para empreendimentos</span>
-            </h1>
-            <p className="mt-8 max-w-2xl text-white/75 font-light leading-relaxed">
-              Transformando áreas fitness em ativos de valor para empreendimentos imobiliários, hotéis, residenciais e marcas.
-            </p>
-          </FadeIn>
-
-          {/* Texto principal */}
-          <FadeIn delay={0.2}>
-            <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
-              <div className="md:col-span-7 flex flex-col justify-center space-y-6 text-white/80 font-light text-lg leading-relaxed">
-                <p>
-                  O wellness deixou de ser apenas uma amenidade. Hoje, espaços fitness, áreas de recovery, studios de movimento e ambientes dedicados à longevidade influenciam diretamente a percepção de valor, o desejo de compra e a experiência do usuário dentro de um empreendimento.
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
+              <div className="md:col-span-7 flex flex-col justify-center">
+                <p className="text-xs tracking-[0.4em] uppercase mb-6 font-light" style={{ color: ACCENT }}>— Wellness Spaces</p>
+                <h1 className="text-4xl md:text-6xl font-serif text-white leading-tight">
+                  Projetista de espaços wellness<br />
+                  <span className="italic font-light" style={{ color: ACCENT }}>para empreendimentos</span>
+                </h1>
+                <p className="mt-8 max-w-2xl text-white/75 font-light leading-relaxed">
+                  Transformando áreas fitness em ativos de valor para empreendimentos imobiliários, hotéis, residenciais e marcas.
                 </p>
-                <p>
-                  Michel Bueno atua como projetista e consultor na criação de espaços wellness que unem estética, funcionalidade, operação e posicionamento premium.
-                </p>
-                <p>
-                  Seu trabalho considera não apenas os equipamentos, mas toda a jornada do usuário: circulação, layout, iluminação, materiais, experiência sensorial, tipo de treino, público-alvo, operação, manutenção e potencial de diferenciação comercial.
-                </p>
+                <div className="mt-10 space-y-6 text-white/80 font-light text-lg leading-relaxed">
+                  <p>
+                    O wellness deixou de ser apenas uma amenidade. Hoje, espaços fitness, áreas de recovery, studios de movimento e ambientes dedicados à longevidade influenciam diretamente a percepção de valor, o desejo de compra e a experiência do usuário dentro de um empreendimento.
+                  </p>
+                  <p>
+                    Michel Bueno atua como projetista e consultor na criação de espaços wellness que unem estética, funcionalidade, operação e posicionamento premium.
+                  </p>
+                  <p>
+                    Seu trabalho considera não apenas os equipamentos, mas toda a jornada do usuário: circulação, layout, iluminação, materiais, experiência sensorial, tipo de treino, público-alvo, operação, manutenção e potencial de diferenciação comercial.
+                  </p>
+                </div>
               </div>
               <div className="md:col-span-5">
-                <div className="h-full min-h-[320px] overflow-hidden">
+                <div className="h-full min-h-[420px] overflow-hidden">
                   <img src="/service-2.jpg" alt="Espaço wellness" className="w-full h-full object-cover grayscale-[15%]" />
                 </div>
               </div>
