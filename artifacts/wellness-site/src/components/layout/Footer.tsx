@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const ACCENT = "#A0A0A0";
 
 const socials = [
-  { label: "Instagram · @mb_wellnessdesing", href: "https://www.instagram.com/mb_wellnessdesing", Icon: FaInstagram },
+  { label: "Instagram · @mb_wellnessdesign", href: "https://www.instagram.com/mb_wellnessdesign", Icon: FaInstagram },
   { label: "Instagram · @michel__bueno", href: "https://www.instagram.com/michel__bueno", Icon: FaInstagram },
   { label: "LinkedIn · Michel Bueno", href: "https://www.linkedin.com/in/michel-bueno-88a96440a", Icon: FaLinkedinIn },
 ];

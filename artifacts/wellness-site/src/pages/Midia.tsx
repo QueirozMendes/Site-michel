@@ -48,12 +48,12 @@ export default function Midia() {
               <h2 className="font-serif text-white text-3xl md:text-4xl mb-6">Acompanhe no Instagram</h2>
               <div className="flex flex-col items-center gap-4">
                 <a
-                  href="https://www.instagram.com/mb_wellnessdesing"
+                  href="https://www.instagram.com/mb_wellnessdesign"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-white/80 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1"
                 >
-                  @mb_wellnessdesing
+                  @mb_wellnessdesign
                 </a>
                 <a
                   href="https://www.instagram.com/michel__bueno"
